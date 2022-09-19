@@ -1,11 +1,9 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 int check_cycle(listint_t *list)
 {
-    listint_t *current = malloc(sizeof(listint_t));
-    listint_t *head = malloc(sizeof(listint_t));
+    listint_t *current, *head;
     current = list;
     head = current;
     current = current->next;
@@ -13,13 +11,9 @@ int check_cycle(listint_t *list)
     {
         if (current == head)
         {
-            free(current);
-            free(head);
             return (1);
         }
         current = current->next;
     }
-    free(current);
-    free(head);
     return (0);
 }
