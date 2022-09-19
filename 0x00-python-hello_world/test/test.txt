@@ -195,42 +195,6 @@ GitHub repository: alx-higher_level_programming
 Directory: 0x00-python-hello_world
 File: 10-check_cycle.c, lists.h
 
-
-###################################################################################################################
-
-11. Hello, write
-#advanced
-Écrivez un script Python qui imprime exactement et dont l'œuvre d'art est utile - Dora Korpar, 2015-10-19, 
-suivi d'une nouvelle ligne.
-
-Utiliser la fonction write depuis le module sys
-Vous n'êtes pas autorisé à utiliser l'impression
-Votre script doit imprimer sur stderr
-Votre script doit se terminer avec le code d'état 1
-
-
-Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, 
-followed by a new line.
-
-Use the function write from the sys module
-You are not allowed to use print
-Your script should print to stderr
-Your script should exit with the status code 1
-guillaume@ubuntu:~/py/0x00$ ./100-write.py
-and that piece of art is useful - Dora Korpar, 2015-10-19
-guillaume@ubuntu:~/py/0x00$ echo $?
-1
-guillaume@ubuntu:~/py/0x00$ ./100-write.py 2> q
-guillaume@ubuntu:~/py/0x00$ cat q
-and that piece of art is useful - Dora Korpar, 2015-10-19
-guillaume@ubuntu:~/py/0x00$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x00-python-hello_world
-File: 100-write.py
-
-
 ###################################################################################################################
 
 12. Compile
