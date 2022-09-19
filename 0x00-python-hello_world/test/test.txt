@@ -459,6 +459,8 @@ File: 101-compile
 
 13. ByteCode -> Python #1
 #advanced
+Écrivez la fonction Python def magic_calculation(a, b) : qui fait exactement la même chose que le bytecode Python suivant :
+
 Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
 
   3           0 LOAD_CONST               1 (98)
