@@ -29,6 +29,11 @@ File: 0-run
 
 1. Run inline
 mandatory
+Écrivez un script Shell qui exécute du code Python.
+
+Le code Python sera enregistré dans la variable d'environnement $PYCODE
+
+
 Write a Shell script that runs Python code.
 
 The Python code will be saved in the environment variable $PYCODE
@@ -48,6 +53,13 @@ File: 1-run_inline
 
 2. Hello, print
 mandatory
+Écrivez un script Python qui imprime exactement "Programmer, c'est comme construire un puzzle multilingue, 
+suivi d'une nouvelle ligne.
+
+Utilisez la fonction imprimer
+
+
+
 Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 
 Use the function print
@@ -65,7 +77,21 @@ File: 2-print.py
 
 3. Print integer
 mandatory
-Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
+Complétez ce code source afin d'imprimer l'entier stocké dans la variable number, suivi de Battery street,
+suivi d'une nouvelle ligne.
+
+Vous pouvez trouver le code source ici
+La sortie du script doit être :
+le numéro, suivi de Battery street,
+suivi d'une nouvelle ligne
+Vous n'êtes pas autorisé à convertir le numéro de la variable en une chaîne
+Votre code doit faire 3 lignes
+Vous devez utiliser les astuces des f-strings
+
+
+
+Complete this source code in order to print the integer stored in the variable number, followed by Battery street, 
+followed by a new line.
 
 You can find the source code here
 The output of the script should be:
@@ -87,6 +113,16 @@ File: 3-print_number.py
 ###################################################################################################################
 
 4. Print float
+obligatoire
+Complétez le code source afin d'imprimer le flottant stocké dans la variable numéro avec une précision de 2 chiffres.
+
+Vous pouvez trouver le code source ici
+La sortie du programme devrait être :
+Float :, suivi du float avec seulement 2 chiffres
+suivi d'une nouvelle ligne
+Vous n'êtes pas autorisé à convertir un nombre en chaîne
+Vous devez utiliser des f-strings
+
 mandatory
 Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
 
@@ -110,6 +146,18 @@ File: 4-print_float.py
 
 5. Print string
 mandatory
+Complétez ce code source afin d'imprimer 3 fois une chaîne stockée dans la variable str, suivie de ses 9 premiers caractères.
+
+Vous pouvez trouver le code source ici
+La sortie du programme devrait être :
+3 fois la valeur de str
+suivi d'une nouvelle ligne
+suivi des 9 premiers caractères de str
+suivi d'une nouvelle ligne
+Vous n'êtes pas autorisé à utiliser des boucles ou des instructions conditionnelles
+Votre programme doit comporter au maximum 5 lignes
+
+
 Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
 
 You can find the source code here
@@ -135,6 +183,14 @@ File: 5-print_string.py
 
 6. Play with strings
 mandatory
+Complétez ce code source pour imprimer Bienvenue à Holberton School !
+
+Vous pouvez trouver le code source ici
+Vous n'êtes pas autorisé à utiliser des boucles ou des instructions conditionnelles.
+Vous devez utiliser les variables str1 et str2 dans votre nouvelle ligne de code
+Votre programme doit faire exactement 5 lignes
+
+
 Complete this source code to print Welcome to Holberton School!
 
 You can find the source code here
@@ -157,6 +213,16 @@ File: 6-concat.py
 
 7. Copy - Cut - Paste
 mandatory
+Complétez ce code source
+
+Vous pouvez trouver le code source ici
+Vous n'êtes pas autorisé à utiliser des boucles ou des instructions conditionnelles
+Votre programme doit faire exactement 8 lignes
+word_first_3 doit contenir les 3 premières lettres du mot variable
+word_last_2 doit contenir les 2 dernières lettres du mot variable
+middle_word doit contenir la valeur du mot variable sans les première et dernière lettres
+
+
 Complete this source code
 
 You can find the source code here
@@ -183,6 +249,14 @@ File: 7-edges.py
 
 8. Create a new sentence
 mandatory
+Complétez ce code source pour imprimer la programmation orientée objet avec Python, suivi d'une nouvelle ligne.
+
+Vous pouvez trouver le code source ici
+Vous n'êtes pas autorisé à utiliser des boucles ou des instructions conditionnelles
+Votre programme doit faire exactement 5 lignes
+Vous n'êtes pas autorisé à créer de nouvelles variables
+Vous n'êtes pas autorisé à utiliser des littéraux de chaîne
+
 Complete this source code to print object-oriented programming with Python, followed by a new line.
 
 You can find the source code here
@@ -206,6 +280,10 @@ File: 8-concat_edges.py
 
 9. Easter Egg
 mandatory
+Écrivez un script Python qui imprime "The Zen of Python", par TimPeters, suivi d'une nouvelle ligne.
+
+Votre script doit comporter au maximum 98 caractères (veuillez vérifier avec wc -m 9-easter_egg.py)
+
 Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
 
 Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
@@ -243,11 +321,27 @@ File: 9-easter_egg.py
 
 10. Linked list cycle
 mandatory
+Préparation de l'entretien technique :
+
+Vous n'êtes pas autorisé à rechercher quoi que ce soit sur Google
+Tableau blanc d'abord
+Cette tâche et toutes les futures tâches de préparation aux entretiens techniques comprendront des vérifications 
+de l'efficacité de votre solution, c'est-à-dire si le temps d'exécution de votre solution est suffisamment rapide, 
+votre solution nécessite-t-elle une utilisation supplémentaire de la mémoire / des mallocs, etc.
+Écrivez une fonction en C qui vérifie si une liste chaînée contient un cycle.
+
+Prototype : int check_cycle(listint_t *list);
+Retour : 0 s'il n'y a pas de cycle, 1 s'il y a un cycle
+Conditions:
+
+Seules ces fonctions sont autorisées : write, printf, putchar, puts, malloc, free
+
 Technical interview preparation:
 
 You are not allowed to google anything
 Whiteboard first
-This task and all future technical interview prep tasks will include checks for the efficiency of your solution, i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.
+This task and all future technical interview prep tasks will include checks for the efficiency of your solution, 
+i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.
 Write a function in C that checks if a singly linked list has a cycle in it.
 
 Prototype: int check_cycle(listint_t *list);
@@ -412,7 +506,8 @@ carrie@ubuntu:~/0x00$$ ./cycle
 Linked list has no cycle
 Linked list has a cycle
 carrie@ubuntu:~/0x00$
-Solving a problem is already a big win! but finding the best and optimal way to solve it, it’s way better! Think about the most optimal / fastest way to do it.
+Solving a problem is already a big win! but finding the best and optimal way to solve it, it’s way better! 
+Think about the most optimal / fastest way to do it.
 
 Repo:
 
@@ -425,7 +520,17 @@ File: 10-check_cycle.c, lists.h
 
 11. Hello, write
 #advanced
-Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+Écrivez un script Python qui s'imprime exactement et dont l'œuvre d'art est utile - Dora Korpar, 2015-10-19, 
+suivi d'une nouvelle ligne.
+
+Utiliser la fonction write depuis le module sys
+Vous n'êtes pas autorisé à utiliser l'impression
+Votre script doit imprimer sur stderr
+Votre script doit se terminer avec le code d'état 1
+
+
+Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, 
+followed by a new line.
 
 Use the function write from the sys module
 You are not allowed to use print
@@ -450,6 +555,13 @@ File: 100-write.py
 
 12. Compile
 #advanced
+Écrivez un script qui compile un fichier de script Python.
+
+Le nom du fichier Python sera stocké dans la variable d'environnement $PYFILE
+
+Le nom du fichier de sortie doit être $PYFILEc (ex : export PYFILE=my_main.py => nom du fichier de sortie : my_main.pyc)
+
+
 Write a script that compiles a Python script file.
 
 The Python file name will be stored in the environment variable $PYFILE
