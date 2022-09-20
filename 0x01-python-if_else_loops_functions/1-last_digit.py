@@ -7,7 +7,7 @@ if n < 0:
     n = - n
 i = n % 10
 if i > 5:
-    print(str.format(number, i, "is greater than 5"))
+    print(str.format(number, i, "greater than 5"))
 elif i == 0:
     print(str.format(number, i, i))
 elif i < 6 and i != 0:
