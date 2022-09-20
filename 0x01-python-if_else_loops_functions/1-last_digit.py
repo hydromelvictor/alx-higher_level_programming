@@ -6,6 +6,8 @@ n = number
 if n < 0:
     n = - n
 i = n % 10
+if number < 0:
+    i = - i
 if i > 5:
     print(str.format(number, i, "greater than 5"))
 elif i == 0:
