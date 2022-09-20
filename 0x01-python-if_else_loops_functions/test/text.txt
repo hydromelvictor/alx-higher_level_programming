@@ -53,14 +53,35 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 0-positive_or_negative.py
-  
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 1. The last digit
 mandatory
-This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.
+Ce programme attribuera un numéro signé aléatoire au numéro de variable à chaque fois qu'il est exécuté.
+Complétez le code source afin d'imprimer le dernier chiffre du nombre stocké dans la variable nombre.
+
+Vous pouvez trouver le code source ici
+Le numéro de variable stockera une valeur différente à chaque fois que vous exécuterez ce programme
+Vous n'avez pas besoin de comprendre ce que font import, random.randint. Merci de ne pas toucher à ce code.
+Cette ligne ne doit pas changer : number = random.randint(-10000, 10000)
+La sortie du programme devrait être :
+La chaîne Dernier chiffre de, suivi de
+le nombre, suivi de
+la chaîne est, suivie du dernier chiffre du nombre, suivi de
+si le dernier chiffre est supérieur à 5 : la chaîne et est supérieur à 5
+si le dernier chiffre est 0 : la chaîne et vaut 0
+si le dernier chiffre est inférieur à 6 et différent de 0 : la chaîne et est inférieur à 6 et différent de 0
+suivi d'une nouvelle ligne
+
+
+This program will assign a random signed number to the variable number each time it is executed. 
+Complete the source code in order to print the last digit of the number stored in the variable number.
 
 You can find the source code here
 The variable number will store a different value every time you will run this program
-You don’t have to understand what import, random.randint do. Please do not touch this code. This line should not change: number = random.randint(-10000, 10000)
+You don’t have to understand what import, random.randint do. Please do not touch this code. 
+This line should not change: number = random.randint(-10000, 10000)
 The output of the program should be:
 The string Last digit of, followed by
 the number, followed by
@@ -70,7 +91,7 @@ if the last digit is 0: the string and is 0
 if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
 followed by a new line
 guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 4205 is 5 and is less than 6 and not 0
+Last digit of 4205 is 5 and is less than Last digit of 6 and not 0
 guillaume@ubuntu:~/0x01$ ./1-last_digit.py
 Last digit of -626 is -6 and is less than 6 and not 0
 guillaume@ubuntu:~/0x01$ ./1-last_digit.py
@@ -97,9 +118,21 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 1-last_digit.py
-  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
 mandatory
+
+Écrivez un programme qui imprime l'alphabet ASCII, en minuscules, non suivi d'une nouvelle ligne.
+
+Vous ne pouvez utiliser qu'une seule fonction d'impression avec un format de chaîne
+Vous ne pouvez utiliser qu'une seule boucle dans votre code
+Vous n'êtes pas autorisé à stocker des caractères dans une variable
+Vous n'êtes pas autorisé à importer un module
+
+
+
 Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 
 You can only use one print function with string format
@@ -113,9 +146,21 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 2-print_alphabet.py
-  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 3. When I was having that alphabet soup, I never thought that it would pay off
 mandatory
+
+Écrivez un programme qui imprime l'alphabet ASCII, en minuscules, non suivi d'une nouvelle ligne.
+
+Imprimer toutes les lettres sauf q et e
+Vous ne pouvez utiliser qu'une seule fonction d'impression avec un format de chaîne
+Vous ne pouvez utiliser qu'une seule boucle dans votre code
+Vous n'êtes pas autorisé à stocker des caractères dans une variable
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 
 Print all the letters except q and e
@@ -130,9 +175,20 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 3-print_alphabt.py
-  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 4. Hexadecimal printing
 mandatory
+
+Écrivez un programme qui imprime tous les nombres de 0 à 98 en décimal et en hexadécimal (comme dans l'exemple suivant)
+
+Vous ne pouvez utiliser qu'une seule fonction d'impression avec un format de chaîne
+Vous ne pouvez utiliser qu'une seule boucle dans votre code
+Vous n'êtes pas autorisé à stocker des nombres ou des chaînes dans une variable
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
 
 You can only use one print function with string format
@@ -169,9 +225,22 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 4-print_hexa.py
-  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 5. 00...99
 mandatory
+Écrivez un programme qui imprime des nombres de 0 à 99.
+
+Les nombres doivent être séparés par ,, suivi d'un espace
+Les nombres doivent être imprimés dans l'ordre croissant, avec deux chiffres
+Le dernier chiffre doit être suivi d'une nouvelle ligne
+Vous ne pouvez pas utiliser plus de 2 fonctions d'impression au format chaîne
+Vous ne pouvez utiliser qu'une seule boucle dans votre code
+Vous n'êtes pas autorisé à stocker des nombres ou des chaînes dans une variable
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a program that prints numbers from 0 to 99.
 
 Numbers must be separated by ,, followed by a space
@@ -182,16 +251,36 @@ You can only use one loop in your code
 You are not allowed to store numbers or strings in a variable
 You are not allowed to import any module
 guillaume@ubuntu:~/0x01$ ./5-print_comb2.py
-00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 
+28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 
+56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 
+84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
 guillaume@ubuntu:~/0x01$ 
 Repo:
 
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 5-print_comb2.py
-  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 6. Inventing is a combination of brains and materials. The more brains you use, the less material you need
 mandatory
+Écrivez un programme qui imprime toutes les combinaisons différentes possibles de deux chiffres.
+
+Les nombres doivent être séparés par ,, suivi d'un espace
+Les deux chiffres doivent être différents
+01 et 10 sont considérés comme la même combinaison des deux chiffres 0 et 1
+Imprimer uniquement la plus petite combinaison de deux chiffres
+Les nombres doivent être imprimés dans l'ordre croissant, avec deux chiffres
+Le dernier chiffre doit être suivi d'une nouvelle ligne
+Vous ne pouvez pas utiliser plus de 3 fonctions d'impression au format chaîne
+Vous ne pouvez pas utiliser plus de 2 boucles dans votre code
+Vous n'êtes pas autorisé à stocker des nombres ou des chaînes dans une variable
+Vous n'êtes pas autorisé à importer un module
+
+
+
 Write a program that prints all possible different combinations of two digits.
 
 Numbers must be separated by ,, followed by a space
@@ -205,16 +294,29 @@ You can only use no more than 2 loops in your code
 You are not allowed to store numbers or strings in a variable
 You are not allowed to import any module
 guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
-01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
+01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 
+46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
 guillaume@ubuntu:~/0x01$ 
 Repo:
 
 GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 6-print_comb3.py
-  
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 7. islower
 mandatory
+
+Écrivez une fonction qui vérifie les caractères minuscules.
+
+Prototype : def islower(c) :
+Renvoie True si c est en minuscule
+Renvoie Faux sinon
+Vous n'êtes pas autorisé à importer un module
+Vous n'êtes pas autorisé à utiliser str.upper() et str.isupper()
+
+
 Write a function that checks for lowercase character.
 
 Prototype: def islower(c):
@@ -248,8 +350,19 @@ GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 7-islower.py
   
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 8. To uppercase
 mandatory
+Écrivez une fonction qui imprime une chaîne en majuscule suivie d'une nouvelle ligne.
+
+Prototype : def majuscule(str) :
+Vous ne pouvez pas utiliser plus de 2 fonctions d'impression au format chaîne
+Vous ne pouvez utiliser qu'une seule boucle dans votre code
+Vous n'êtes pas autorisé à importer un module
+Vous n'êtes pas autorisé à utiliser str.upper() et str.isupper()
+
+
 Write a function that prints a string in uppercase followed by a new line.
 
 Prototype: def uppercase(str):
@@ -277,8 +390,18 @@ GitHub repository: alx-higher_level_programming
 Directory: 0x01-python-if_else_loops_functions
 File: 8-uppercase.py
   
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
 mandatory
+Écrivez une fonction qui imprime le dernier chiffre d'un nombre.
+
+Prototype : def print_last_digit(nombre) :
+Renvoie la valeur du dernier chiffre
+Vous n'êtes pas autorisé à importer un module
+Vous n'avez pas besoin de comprendre __import__
+
+
 Write a function that prints the last digit of a number.
 
 Prototype: def print_last_digit(number):
