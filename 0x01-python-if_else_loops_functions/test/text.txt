@@ -30,6 +30,13 @@ File: 100-print_tebahpla.py
 
 15. Remove at position
 #advanced
+Écrivez une fonction qui crée une copie de la chaîne, en supprimant le caractère à la position n (pas à la manière Python,
+l'"indice de tableau C").
+
+Prototype : def remove_char_at(str, n) :
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a function that creates a copy of the string, removing the character at the position n (not the Python way, 
 the “C array index”).
 
