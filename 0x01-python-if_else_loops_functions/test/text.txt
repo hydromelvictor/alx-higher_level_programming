@@ -1,45 +1,4 @@
 
-6. Inventing is a combination of brains and materials. The more brains you use, the less material you need
-mandatory
-Écrivez un programme qui imprime toutes les combinaisons différentes possibles de deux chiffres.
-
-Les nombres doivent être séparés par ,, suivi d'un espace
-Les deux chiffres doivent être différents
-01 et 10 sont considérés comme la même combinaison des deux chiffres 0 et 1
-Imprimer uniquement la plus petite combinaison de deux chiffres
-Les nombres doivent être imprimés dans l'ordre croissant, avec deux chiffres
-Le dernier chiffre doit être suivi d'une nouvelle ligne
-Vous ne pouvez pas utiliser plus de 3 fonctions d'impression au format chaîne
-Vous ne pouvez pas utiliser plus de 2 boucles dans votre code
-Vous n'êtes pas autorisé à stocker des nombres ou des chaînes dans une variable
-Vous n'êtes pas autorisé à importer un module
-
-
-
-Write a program that prints all possible different combinations of two digits.
-
-Numbers must be separated by ,, followed by a space
-The two digits must be different
-01 and 10 are considered the same combination of the two digits 0 and 1
-Print only the smallest combination of two digits
-Numbers should be printed in ascending order, with two digits
-The last number should be followed by a new line
-You can only use no more than 3 print functions with string format
-You can only use no more than 2 loops in your code
-You are not allowed to store numbers or strings in a variable
-You are not allowed to import any module
-guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
-01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 
-46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
-guillaume@ubuntu:~/0x01$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x01-python-if_else_loops_functions
-File: 6-print_comb3.py
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 7. islower
 mandatory
 

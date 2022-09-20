@@ -4,5 +4,3 @@ def islower(c):
         print("True", end="")
     else:
         print("False",end="")
-
-islower('H')
