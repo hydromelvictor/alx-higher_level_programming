@@ -9,7 +9,9 @@ if __name__ == "__main__":
         func = [[add, "+"], [sub, "-"], [mul, "*"], [div, "/"]]
         for i in func:
             if argv[2] == i[1]:
-                print("{} {} {} = {:d}".format(argv[1], i[1], argv[3], i[0](int(argv[1]), int(argv[3]))))
+                print("{} {} {} = {:d}".format(argv[1], i[1], argv[3],
+                                               i[0](int(argv[1]),
+                                                    int(argv[3]))))
                 quit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
