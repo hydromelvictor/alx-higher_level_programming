@@ -1,60 +1,3 @@
-4. Who are you?
-mandatory
-Écrivez un programme qui imprime tous les noms définis par le module compilé hidden_4.pyc (veuillez le télécharger localement).
-
-Vous devez imprimer un nom par ligne, dans l'ordre alphabétique
-Vous ne devez imprimer que les noms qui ne commencent pas par __
-Votre code ne doit pas être exécuté lors de l'importation
-Assurez-vous que vous exécutez votre code en Python3.8.x (hidden_4.pyc a été compilé avec cette version)
-
-
-
-Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally).
-
-You should print one name per line, in alpha order
-You should print only names that do not start with __
-Your code should not be executed when imported
-Make sure you are running your code in Python3.8.x (hidden_4.pyc has been compiled with this version)
-guillaume@ubuntu:~/0x02$ curl -Lso "hidden_4.pyc" "https://github.com/holbertonschool/0x02.py/raw/master/hidden_4.pyc"
-guillaume@ubuntu:~/0x02$ ./4-hidden_discovery.py | sort
-my_secret_santa
-print_hidden
-print_school
-guillaume@ubuntu:~/0x02$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x02-python-import_modules
-File: 4-hidden_discovery.py
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-5. Everything can be imported
-mandatory
-
-Écrivez un programme qui importe la variable a du fichier variable_load_5.py et imprime sa valeur.
-
-Vous n'êtes pas autorisé à utiliser * pour importer ou __import__
-Votre code ne doit pas être exécuté lors de l'importation
-
-
-Write a program that imports the variable a from the file variable_load_5.py and prints its value.
-
-You are not allowed to use * for importing or __import__
-Your code should not be executed when imported
-guillaume@ubuntu:~/0x02$ cat variable_load_5.py
-#!/usr/bin/python3
-a = 98
-"""Simple variable
-"""
-
-guillaume@ubuntu:~/0x02$ ./5-variable_load.py
-98
-guillaume@ubuntu:~/0x02$
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x02-python-import_modules
-File: 5-variable_load.py
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 6. Build my own calculator!
 #advanced
 Écrivez un programme qui importe toutes les fonctions du fichier calculator_1.py et gère les opérations de base.
@@ -170,6 +113,12 @@ File: 100-my_calculator.py
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 7. Easy print
 #advanced
+Écrivez un programme qui affiche #pythoniscool, suivi d'une nouvelle ligne, dans la sortie standard.
+
+Votre programme doit faire au maximum 2 lignes
+Vous n'êtes pas autorisé à utiliser print ou eval ou ouvrir ou importer sys dans votre fichier 101-easy_print.py
+
+
 Write a program that prints #pythoniscool, followed by a new line, in the standard output.
 
 Your program should be maximum 2 lines long
@@ -243,6 +192,17 @@ File: 102-magic_calculation.py
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 9. Fast alphabet
 #advanced
+Écrivez un programme qui imprime l'alphabet en majuscule, suivi d'une nouvelle ligne.
+
+Votre programme doit faire au maximum 3 lignes
+Vous n'êtes pas autorisé à utiliser :
+toutes les boucles
+toutes les instructions conditionnelles
+str.join()
+n'importe quel littéral de chaîne
+tous les appels système
+
+
 Write a program that prints the alphabet in uppercase, followed by a new line.
 
 Your program should be maximum 3 lines long
