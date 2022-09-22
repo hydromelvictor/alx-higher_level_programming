@@ -58,6 +58,22 @@ File: 0-add.py
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 1. My first toolbox!
 mandatory
+Écrivez un programme qui importe des fonctions depuis le fichier calculator_1.py, fait quelques calculs et imprime 
+le résultat.
+
+N'utilisez pas la fonction print (avec un format de chaîne pour afficher des entiers) plus de 4 fois
+Vous devez définir :
+la valeur 10 à une variable a
+la valeur 5 à une variable b
+et utilisez ces deux variables uniquement, comme arguments lors de l'appel de fonctions (y compris print)
+a et b doivent être définis sur 2 lignes différentes : a = 10 et une autre b = 5
+Votre programme doit appeler chacune des fonctions importées. Voir l'exemple ci-dessous pour le format
+le mot calculatrice_1 ne doit être utilisé qu'une seule fois dans votre fichier
+Vous n'êtes pas autorisé à utiliser * pour importer ou __import__
+Votre code ne doit pas être exécuté lors de l'importation
+
+
+
 Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
 
 Do not use the function print (with string format to display integers) more than 4 times
@@ -137,6 +153,24 @@ File: 1-calculation.py
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 2. How to make a script dynamic!
 mandatory
+Ecrire un programme qui imprime le nombre et la liste de ses arguments.
+
+La sortie doit être :
+Nombre d'argument(s) suivi d'argument (si le nombre est un) ou d'arguments (sinon), suivi de
+: (ou . si aucun argument n'a été passé) suivi de
+une nouvelle ligne, suivie de (si au moins un argument),
+une ligne par argument :
+la position de l'argument (commençant à 1) suivi de :, suivi de la valeur de l'argument et d'une nouvelle ligne
+Votre code ne doit pas être exécuté lors de l'importation
+Le nombre d'éléments de argv peut être récupéré en utilisant : len(argv)
+Vous n'avez pas encore besoin de bien comprendre les listes, mais imaginez que argv puisse être 
+utilisé comme un tableau C :
+vous pouvez utiliser un index pour le parcourir. Il existe d'autres moyens (qui seront préférés pour les futures 
+tâches du projet),
+si vous les connaissez, vous pouvez les utiliser.
+
+
+
 Write a program that prints the number of and the list of its arguments.
 
 The output should be:
@@ -172,6 +206,15 @@ File: 2-args.py
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 3. Infinite addition
 mandatory
+Écrire un programme qui imprime le résultat de l'addition de tous les arguments
+
+La sortie doit être le résultat de l'ajout de tous les arguments, suivi d'une nouvelle ligne
+Vous pouvez convertir des arguments en entiers en utilisant int () (vous pouvez supposer que tous 
+les arguments peuvent être convertis en entiers)
+Votre code ne doit pas être exécuté lors de l'importation
+
+
+
 Write a program that prints the result of the addition of all arguments
 
 The output should be the result of the addition of all arguments, followed by a new line
@@ -208,6 +251,8 @@ guillaume@ubuntu:~/0x02$ ./3-infinite_add.py
 666666666666666666666666667777777777777777777777777777778888888888888888888888888888888999999999
 99999999999999989999999999999999999
 guillaume@ubuntu:~/0x02$
+
+Rappelez-vous comment vous l'avez fait (ou pas) en C ?
 Remember how you did (or did not) do it in C? #pythoniscool
 
 
@@ -220,6 +265,15 @@ File: 3-infinite_add.py
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 4. Who are you?
 mandatory
+Écrivez un programme qui imprime tous les noms définis par le module compilé hidden_4.pyc (veuillez le télécharger localement).
+
+Vous devez imprimer un nom par ligne, dans l'ordre alphabétique
+Vous ne devez imprimer que les noms qui ne commencent pas par __
+Votre code ne doit pas être exécuté lors de l'importation
+Assurez-vous que vous exécutez votre code en Python3.8.x (hidden_4.pyc a été compilé avec cette version)
+
+
+
 Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally).
 
 You should print one name per line, in alpha order
@@ -240,6 +294,13 @@ File: 4-hidden_discovery.py
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 5. Everything can be imported
 mandatory
+
+Écrivez un programme qui importe la variable a du fichier variable_load_5.py et imprime sa valeur.
+
+Vous n'êtes pas autorisé à utiliser * pour importer ou __import__
+Votre code ne doit pas être exécuté lors de l'importation
+
+
 Write a program that imports the variable a from the file variable_load_5.py and prints its value.
 
 You are not allowed to use * for importing or __import__
@@ -261,11 +322,35 @@ File: 5-variable_load.py
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 6. Build my own calculator!
 #advanced
+Écrivez un programme qui importe toutes les fonctions du fichier calculator_1.py et gère les opérations de base.
+
+Utilisation : ./100-my_calculator.py a opérateur b
+Si le nombre d'arguments n'est pas 3, votre programme doit :
+print 
+Utilisation : ./100-my_calculator.py <a> <opérateur> <b> suivi d'une nouvelle ligne
+sortir avec la valeur 1
+l'opérateur peut être :
++ pour plus
+- pour la soustraction
+* pour la multiplication
+/ pour division
+Si l'opérateur n'est pas l'un des ci-dessus :
+print Opérateur inconnu. Opérateurs disponibles : +, -, * et / suivis d'une nouvelle ligne
+sortir avec la valeur 1
+Vous pouvez convertir a et b en entiers en utilisant int() (vous pouvez supposer que tous les arguments seront 
+castables en entiers)
+Le résultat doit être imprimé comme ceci : <a> <opérateur> <b> = <résultat>, suivi d'une nouvelle ligne
+Vous n'êtes pas autorisé à utiliser * pour importer ou __import__
+Votre code ne doit pas être exécuté lors de l'importation
+
+
+
 Write a program that imports all functions from the file calculator_1.py and handles basic operations.
 
 Usage: ./100-my_calculator.py a operator b
 If the number of arguments is not 3, your program has to:
-print Usage: ./100-my_calculator.py <a> <operator> <b> followed with a new line
+print 
+Usage: ./100-my_calculator.py <a> <operator> <b> followed with a new line
 exit with the value 1
 operator can be:
 + for addition
