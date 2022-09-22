@@ -3,6 +3,7 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
     arg = sys.argv
+
     def calc(*param):
         nb = len(arg)
         res = "{} + {} = {}"
@@ -21,7 +22,8 @@ if __name__ == "__main__":
                     print(res.format(arg[1], arg[3], div(int(arg[1]),
                                                          int(arg[3]))))
                 case _:
-                    print("Unknown operator. Available operators: +, -, * and /")
+                    print("Unknown operator. Available operators: +, -,\
+                        * and /")
                     sys.exit(1)
             sys.exit(0)
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
