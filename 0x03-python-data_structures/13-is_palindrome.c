@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ * is_palindrome - palindrome
+ *
+ * @head: parameter
+ * Return: int
+ */
 int is_palindrome(listint_t **head)
 {
     listint_t *left, *rigth, *current;
@@ -12,9 +17,6 @@ int is_palindrome(listint_t **head)
         left = *head;
         current = left;
         rigth = current;
-        if (left->next == NULL)
-            return (0);
-        
         while (rigth->next != NULL)
         {
             rigth = rigth->next;
