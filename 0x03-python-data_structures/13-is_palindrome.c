@@ -1,18 +1,4 @@
 #include "lists.h"
-listint_t *reverse(listint_t **head)
-{
-    listint_t *start, *current, *pos;
-    start = *head;
-    current = NULL;
-    while (start != NULL)
-    {
-        pos = start;
-        start = start->next;
-        pos->next = current;
-        current = pos;
-    }
-    return (current);
-}
 
 int is_palindrome(listint_t **head)
 {
@@ -24,14 +10,37 @@ int is_palindrome(listint_t **head)
     else
     {
         left = *head;
-        rigth = reverse(head);
-        while (left->next != NULL)
+        current = left;
+        rigth = current;
+        while (rigth->next != NULL)
         {
-            if (left->n != rigth->n)
-                return 0;
-            left = left->next;
             rigth = rigth->next;
         }
-        return (1);
+        if (left->n != rigth->n)
+        {
+            return (0);
+        }
+        else
+        {
+            while (left->next != rigth)
+            {
+                left = left->next;
+                current = left;
+                while (current->next != rigth)
+                {
+                    current = current->next;
+                }
+                rigth = current;
+                if (left->n != rigth->n)
+                {
+                    return (0);
+                }
+            }
+            if (left->n == rigth->n)
+            {
+                return (1);
+            }
+            return (0);
+        }
     }
 }
