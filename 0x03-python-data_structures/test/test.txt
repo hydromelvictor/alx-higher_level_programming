@@ -39,48 +39,6 @@ GitHub repository: alx-higher_level_programming
 Directory: 0x03-python-data_structures
 File: 3-print_reversed_list_integer.py
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-4. Replace in a copy
-mandatory
-Écrivez une fonction qui remplace un élément dans une liste à une position spécifique sans modifier 
-la liste d'origine (comme en C).
-
-Prototype : def new_in_list(my_list, idx, element) :
-Si idx est négatif, la fonction doit renvoyer une copie de la liste d'origine
-Si idx est hors plage (> du nombre d'éléments dans my_list), la fonction doit renvoyer une copie de la liste d'origine
-Vous n'êtes pas autorisé à importer un module
-Vous n'êtes pas autorisé à utiliser try/except
-
-
-
-Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).
-
-Prototype: def new_in_list(my_list, idx, element):
-If idx is negative, the function should return a copy of the original list
-If idx is out of range (> of number of element in my_list), the function should return a copy of the original list
-You are not allowed to import any module
-You are not allowed to use try/except
-guillaume@ubuntu:~/0x03$ cat 4-main.py
-#!/usr/bin/python3
-new_in_list = __import__('4-new_in_list').new_in_list
-
-my_list = [1, 2, 3, 4, 5]
-idx = 3
-new_element = 9
-new_list = new_in_list(my_list, idx, new_element)
-
-print(new_list)
-print(my_list)
-
-guillaume@ubuntu:~/0x03$ ./4-main.py
-[1, 2, 3, 9, 5]
-[1, 2, 3, 4, 5]
-guillaume@ubuntu:~/0x03$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x03-python-data_structures
-File: 4-new_in_list.py
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 5. Can you C me now?
 mandatory
 Écrivez une fonction qui supprime tous les caractères c et C d'une chaîne.
@@ -116,170 +74,6 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x03-python-data_structures
 File: 5-no_c.py
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-6. Lists of lists = Matrix
-mandatory
-Écrivez une fonction qui imprime une matrice d'entiers.
-
-Prototype : def print_matrix_integer(matrix=[[]]) :
-Format : voir exemple
-Vous n'êtes pas autorisé à importer un module
-Vous pouvez supposer que la liste ne contient que des entiers
-Vous n'êtes pas autorisé à convertir des entiers en chaînes
-Vous devez utiliser str.format() pour imprimer des entiers
-
-
-
-Write a function that prints a matrix of integers.
-
-Prototype: def print_matrix_integer(matrix=[[]]):
-Format: see example
-You are not allowed to import any module
-You can assume that the list only contains integers
-You are not allowed to cast integers into strings
-You have to use str.format() to print integers
-guillaume@ubuntu:~/0x03$ cat 6-main.py
-#!/usr/bin/python3
-print_matrix_integer = __import__('6-print_matrix_integer').print_matrix_integer
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-print_matrix_integer(matrix)
-print("--")
-print_matrix_integer()
-
-guillaume@ubuntu:~/0x03$ ./6-main.py | cat -e
-1 2 3$
-4 5 6$
-7 8 9$
---$
-$
-guillaume@ubuntu:~/0x03$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x03-python-data_structures
-File: 6-print_matrix_integer.py
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-7. Tuples addition
-mandatory
-Écrivez une fonction qui additionne 2 tuples.
-
-Prototype : def add_tuple(tuple_a=(), tuple_b=()) :
-Renvoie un tuple avec 2 entiers :
-Le premier élément doit être l'addition du premier élément de chaque argument
-Le deuxième élément doit être l'ajout du deuxième élément de chaque argument
-Vous n'êtes pas autorisé à importer un module
-Vous pouvez supposer que les deux tuples ne contiendront que des entiers
-Si un tuple est inférieur à 2, utilisez la valeur 0 pour chaque entier manquant
-Si un tuple est plus grand que 2, n'utilisez que les 2 premiers entiers
-
-
-
-Write a function that adds 2 tuples.
-
-Prototype: def add_tuple(tuple_a=(), tuple_b=()):
-Returns a tuple with 2 integers:
-The first element should be the addition of the first element of each argument
-The second element should be the addition of the second element of each argument
-You are not allowed to import any module
-You can assume that the two tuples will only contain integers
-If a tuple is smaller than 2, use the value 0 for each missing integer
-If a tuple is bigger than 2, use only the first 2 integers
-guillaume@ubuntu:~/0x03$ cat 7-main.py
-#!/usr/bin/python3
-add_tuple = __import__('7-add_tuple').add_tuple
-
-tuple_a = (1, 89)
-tuple_b = (88, 11)
-new_tuple = add_tuple(tuple_a, tuple_b)
-print(new_tuple)
-
-print(add_tuple(tuple_a, (1, )))
-print(add_tuple(tuple_a, ()))
-
-guillaume@ubuntu:~/0x03$ ./7-main.py
-(89, 100)
-(2, 89)
-(1, 89)
-guillaume@ubuntu:~/0x03$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x03-python-data_structures
-File: 7-add_tuple.py
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-8. More returns!
-mandatory
-Écrivez une fonction qui renvoie un tuple avec la longueur d'une chaîne et son premier caractère.
-
-Prototype : def multiple_returns(phrase) :
-Si la phrase est vide, le premier caractère doit être égal à Aucun
-Vous n'êtes pas autorisé à importer un module
-
-
-
-Write a function that returns a tuple with the length of a string and its first character.
-
-Prototype: def multiple_returns(sentence):
-If the sentence is empty, the first character should be equal to None
-You are not allowed to import any module
-guillaume@ubuntu:~/0x03$ cat 8-main.py
-#!/usr/bin/python3
-multiple_returns = __import__('8-multiple_returns').multiple_returns
-
-sentence = "At school, I learnt C!"
-length, first = multiple_returns(sentence)
-print("Length: {:d} - First character: {}".format(length, first))
-
-guillaume@ubuntu:~/0x03$ ./8-main.py
-Length: 22 - First character: A
-guillaume@ubuntu:~/0x03$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x03-python-data_structures
-File: 8-multiple_returns.py
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-9. Find the max
-mandatory
-Écrivez une fonction qui trouve le plus grand entier d'une liste.
-
-Prototype : def max_integer(my_list=[]) :
-Si la liste est vide, retourne None
-Vous pouvez supposer que la liste ne contient que des entiers
-Vous n'êtes pas autorisé à importer un module
-Vous n'êtes pas autorisé à utiliser le max() intégré
-
-
-
-Write a function that finds the biggest integer of a list.
-
-Prototype: def max_integer(my_list=[]):
-If the list is empty, return None
-You can assume that the list only contains integers
-You are not allowed to import any module
-You are not allowed to use the builtin max()
-guillaume@ubuntu:~/0x03$ cat 9-main.py
-#!/usr/bin/python3
-max_integer = __import__('9-max_integer').max_integer
-
-my_list = [1, 90, 2, 13, 34, 5, -13, 3]
-max_value = max_integer(my_list)
-print("Max: {}".format(max_value))
-
-guillaume@ubuntu:~/0x03$ ./9-main.py
-Max: 90
-guillaume@ubuntu:~/0x03$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x03-python-data_structures
-File: 9-max_integer.py
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 10. Only by 2
 mandatory
@@ -329,7 +123,12 @@ File: 10-divisible_by_2.py
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 11. Delete at
 mandatory
+Écrivez une fonction qui supprime l'élément à une position spécifique dans une liste.
 
+Prototype : def delete_at(my_list=[], idx=0) :
+Si idx est négatif ou hors limites, rien ne change (renvoie la même liste)
+Vous n'êtes pas autorisé à utiliser pop()
+Vous n'êtes pas autorisé à importer un module
 
 
 
@@ -361,7 +160,11 @@ File: 11-delete_at.py
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 12. Switch
 mandatory
+Complétez le code source afin de changer la valeur de a et b
 
+Vous pouvez trouver le code source ici
+Votre code doit être inséré là où se trouve le commentaire (ligne 4)
+Votre programme doit faire exactement 5 lignes
 
 
 
