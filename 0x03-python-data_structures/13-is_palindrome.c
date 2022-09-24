@@ -8,15 +8,13 @@
 int is_palindrome(listint_t **head)
 {
     listint_t *left, *rigth, *current;
-    if (*head == NULL)
-    {
-        return (1);
-    }
-    else
+    if (*head != NULL)
     {
         left = *head;
-        current = left;
-        rigth = current;
+        rigth = left;
+        if (left->next == NULL)
+            return (0);
+            
         while (rigth->next != NULL)
         {
             rigth = rigth->next;
@@ -48,4 +46,5 @@ int is_palindrome(listint_t **head)
             return (0);
         }
     }
+    return (1);
 }
