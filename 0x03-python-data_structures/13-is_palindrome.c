@@ -16,13 +16,10 @@ int is_palindrome(listint_t **head)
             return (0);
             
         while (rigth->next != NULL)
-        {
             rigth = rigth->next;
-        }
+
         if (left->n != rigth->n)
-        {
             return (0);
-        }
         else
         {
             while (left->next != rigth)
@@ -30,19 +27,16 @@ int is_palindrome(listint_t **head)
                 left = left->next;
                 current = left;
                 while (current->next != rigth)
-                {
                     current = current->next;
-                }
+
                 rigth = current;
                 if (left->n != rigth->n)
-                {
                     return (0);
-                }
             }
+
             if (left->n == rigth->n)
-            {
                 return (1);
-            }
+
             return (0);
         }
     }

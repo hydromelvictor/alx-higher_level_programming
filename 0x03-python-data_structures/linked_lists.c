@@ -27,7 +27,8 @@ size_t print_listint(const listint_t *h)
  * @head: pointer to pointer of first node of listint_t list
  * @n: integer to be included in new node
  * Return: address of the new element or NULL if it fails
- */
+ */listint_t *reverse(listint_t **head);
+
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
     listint_t *new;
