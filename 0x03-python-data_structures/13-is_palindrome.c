@@ -1,30 +1,23 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-listint_t *reverse_copy(listint_t **head, int n)
+listint_t *reverse_copy(listint_t **head)
 {
-    listint_t *new = malloc(sizeof(listint_t));
-    if (new == NULL)
-        return (NULL);
-
-    new->n = n;
-    new->next = *head;
-    *head = new;
-    return (new);
-}
-
-
-listint_t *copy(listint_t **head)
-{
-    listint_t *current, *copy = NULL;
-    current =*head;
-
-    while (current != NULL)
+    listint_t *old, *pos, *new;
+    old = *head;
+    pos = NULL;
+    while (old != NULL)
     {
-        reverse_copy(&copy, current->n);
-        current = current->next;
+        new = malloc(sizeof(listint_t));
+        if (new == NULL)
+            return (NULL);
+
+        new->n = old->n;
+        new->next = pos;
+        pos = new;
+        old = old->next;
     }
-    return (copy);
+    return (pos);
 }
 
 int is_palindrome(listint_t **head)
@@ -38,7 +31,7 @@ int is_palindrome(listint_t **head)
         if (start->next == NULL)
             return (0);
 
-        current = copy(head);
+        current = reverse_copy(head);
         while (start->next != NULL)
         {
             if (start->n != current->n)
