@@ -45,6 +45,9 @@ int is_palindrome(listint_t **head)
         {
             if (start->n != current->n)
                 return (0);
+            
+            start = start->next;
+            current = current->next;
         }
         return (1);
     }
