@@ -1,59 +1,47 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-listint_t *nil = NULL;
-listint_t *reverse_copy(listint_t **head, listint_t *nil)
-{
-    listint_t *old, *pos = nil, *new;
-    old = *head;
-
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-        return (NULL);
-    
-    new->n = old->n;
-    new->next = pos;
-    pos = new;
-    if (old->next != NULL)
-    {
-        return (reverse_copy(&old->next, new));
-    }
-    /*
-    while (old != NULL)
-    {
-        new = malloc(sizeof(listint_t));
-        if (new == NULL)
-            return (NULL);
-
-        new->n = old->n;
-        new->next = pos;
-        pos = new;
-        old = old->next;
-    }*/
-    return (pos);
-}
-
+/**
+ * is_palindrome - palindrome
+ *
+ * @head: parameter
+ * Return: int
+ */
 int is_palindrome(listint_t **head)
 {
-    listint_t *start, *current;
-    if (*head == NULL)
-        return (1);
-    else
+    listint_t *left, *rigth, *current;
+    if (*head != NULL)
     {
-        start = *head;
-        if (start->next == NULL)
-            return (0);
+        left = *head;
+        
+        if (left->next == NULL)
+            return (1);
 
-        current = reverse_copy(head, NULL);
-        while (start->next != NULL)
+        rigth = left;    
+        while (rigth->next != NULL)
+            rigth = rigth->next;
+
+        if (left->n != rigth->n)
+            return (0);
+        else
         {
-            if (start->n != current->n)
-                return (0);
-            
-            start = start->next;
-            current = current->next;
+            while (left->next != rigth)
+            {
+                left = left->next;
+                current = left;
+                
+                while (current->next != rigth)
+                    current = current->next;
+                
+                if (left->n != current->n)
+                    return (0);
+
+                rigth = current;
+            }
+
+            if (left->n == rigth->n)
+                return (1);
+
+            return (0);
         }
-        return (1);
     }
+    return (1);
 }
