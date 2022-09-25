@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-listint_t *copy(listint_t **head)
+/*listint_t *copy(listint_t **head)
 {
     listint_t *current, *copy = NULL;
     current =*head;
@@ -13,7 +13,7 @@ listint_t *copy(listint_t **head)
     }
     return (copy);
 }
-
+*/
 listint_t *revevrse(listint_t **head)
 {
     listint_t *start, *current = NULL, *pos;
@@ -39,8 +39,8 @@ int is_palindrome(listint_t **head)
         if (start->next == NULL)
             return (0);
 
-        current = copy(head);
-        current = revevrse(&current);
+        /*current = copy(head);*/
+        current = revevrse(head);
         while (start->next != NULL)
         {
             if (start->n != current->n)
