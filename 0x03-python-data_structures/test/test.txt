@@ -164,7 +164,13 @@ File: 13-is_palindrome.c, lists.h
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 14. CPython #0: Python lists
 #advanced
+CPython est l'implémentation de référence du langage de programmation Python. Écrit en C, CPython est la valeur par 
+défaut et la plupart implémentation largement utilisée du langage.
+Puisque nous connaissons maintenant un peu le C, nous pouvons regarder ce qui se passe sous le capot de Python. 
+Amusons-nous avec Python et C, et regardons ce qui rend Python si facile à utiliser.
 
+Tous vos fichiers seront interprétés/compilés sur Ubuntu 14.04 LTS
+Créez une fonction C qui imprime des informations de base sur les listes Python.
 
 
 
@@ -181,14 +187,16 @@ Create a C function that prints some basic info about Python lists.
 Prototype: void print_python_list_info(PyObject *p);
 Format: see example
 Python version: 3.4
-Your shared library will be compiled with this command line: gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
+Your shared library will be compiled with this command line: 
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
 OS: Ubuntu 14.04 LTS
 Start by reading:
 listobject.h
 object.h
 Common Object Structures
 List Objects
-julien@ubuntu:~/CPython$ gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
+julien@ubuntu:~/CPython$ 
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
 julien@ubuntu:~/CPython$ cat 100-test_lists.py 
 import ctypes
 
