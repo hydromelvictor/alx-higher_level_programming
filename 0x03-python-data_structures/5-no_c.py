@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    str = list(my_string)
-    for i in str:
-        if i == 'c' or i == 'C':
-            str.remove(i)
-    my_string = ""
-    for i in str:
-        my_string += i
-    return my_string
-
-print(no_c("Best School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
+    if my_string:
+        str = list(my_string)
+        for i in str:
+            if i == 'c' or i == 'C':
+                str.remove(i)
+            my_string = ""
+        for i in str:
+            my_string += i
+        return my_string
