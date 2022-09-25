@@ -11,10 +11,11 @@ int is_palindrome(listint_t **head)
     if (*head != NULL)
     {
         left = *head;
-        rigth = left;
+        
         if (left->next == NULL)
-            return (0);
-            
+            return (1);
+
+        rigth = left;    
         while (rigth->next != NULL)
             rigth = rigth->next;
 
@@ -26,12 +27,14 @@ int is_palindrome(listint_t **head)
             {
                 left = left->next;
                 current = left;
+                
                 while (current->next != rigth)
                     current = current->next;
+                
+                if (left->n != current->n)
+                    return (0);
 
                 rigth = current;
-                if (left->n != rigth->n)
-                    return (0);
             }
 
             if (left->n == rigth->n)
@@ -43,33 +46,6 @@ int is_palindrome(listint_t **head)
     return (1);
 }
 
-
-
-/*/////////////////////////////////////////*/////////////////////////////////////////////////////////*/
-
-#include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-listint_t *nil = NULL;
-listint_t *reverse_copy(listint_t **head, listint_t *nil)
-{
-    listint_t *old, *pos = nil, *new;
-    old = *head;
-
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-        return (NULL);
-    
-    new->n = old->n;
-    new->next = pos;
-    pos = new;
-    if (old->next != NULL)
-    {
-        return (reverse_copy(&old->next, new));
-    }
-    return (pos);
-}
 
 int is_palindrome(listint_t **head)
 {

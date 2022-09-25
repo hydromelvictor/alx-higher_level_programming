@@ -1,47 +1,44 @@
 #include "lists.h"
-/**
- * is_palindrome - palindrome
- *
- * @head: parameter
- * Return: int
- */
+#include <stdio.h>
+#include <stdlib.h>
+
+listint_t *nil = NULL;
+listint_t *reverse_copy(listint_t **head, listint_t *nil)
+{
+    listint_t *old, *pos = nil, *new;
+    old = *head;
+
+    new = malloc(sizeof(listint_t));
+    if (new == NULL)
+        return (NULL);
+    
+    new->n = old->n;
+    new->next = pos;
+    pos = new;
+    if (old->next != NULL)
+    {
+        return (reverse_copy(&old->next, new));
+    }
+    return (pos);
+}
+
 int is_palindrome(listint_t **head)
 {
-    listint_t *left, *rigth, *current;
-    if (*head != NULL)
+    listint_t *start, *current;
+    if (*head == NULL)
+        return (1);
+    else
     {
-        left = *head;
-        
-        if (left->next == NULL)
-            return (1);
-
-        rigth = left;    
-        while (rigth->next != NULL)
-            rigth = rigth->next;
-
-        if (left->n != rigth->n)
-            return (0);
-        else
+        start = *head;
+        current = reverse_copy(head, NULL);
+        while (start->next != NULL)
         {
-            while (left->next != rigth)
-            {
-                left = left->next;
-                current = left;
-                
-                while (current->next != rigth)
-                    current = current->next;
-                
-                if (left->n != current->n)
-                    return (0);
-
-                rigth = current;
-            }
-
-            if (left->n == rigth->n)
-                return (1);
-
-            return (0);
+            if (start->n != current->n)
+                return (0);
+            
+            start = start->next;
+            current = current->next;
         }
+        return (1);
     }
-    return (1);
 }
