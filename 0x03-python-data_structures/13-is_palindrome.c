@@ -1,44 +1,51 @@
 #include "lists.h"
-/**
- * is_palindrome - palindrome
- *
- * @head: parameter
- * Return: int
- */
+#include <stdio.h>
+#include <stdlib.h>
+listint_t *copy(listint_t **head)
+{
+    listint_t *current, *copy = NULL;
+    current =*head;
+
+    while (current != NULL)
+    {
+        add_nodeint_end(&copy, current->n);
+        current = current->next;
+    }
+    return (copy);
+}
+
+listint_t *revevrse(listint_t **head)
+{
+    listint_t *start, *current = NULL, *pos;
+    start =*head;
+    while (start != NULL)
+    {
+        pos = start;
+        start = start->next;
+        pos->next = current;
+        current = pos;
+    }
+    return (pos);
+}
+
 int is_palindrome(listint_t **head)
 {
-    listint_t *left, *rigth, *current;
-    if (*head != NULL)
+    listint_t *start, *current;
+    if (*head == NULL)
+        return (1);
+    else
     {
-        left = *head;
-        rigth = left;
-        if (left->next == NULL)
+        start = *head;
+        if (start->next == NULL)
             return (0);
-            
-        while (rigth->next != NULL)
-            rigth = rigth->next;
 
-        if (left->n != rigth->n)
-            return (0);
-        else
+        current = copy(head);
+        current = revevrse(&current);
+        while (start->next != NULL)
         {
-            while (left->next != rigth)
-            {
-                left = left->next;
-                current = left;
-                while (current->next != rigth)
-                    current = current->next;
-
-                rigth = current;
-                if (left->n != rigth->n)
-                    return (0);
-            }
-
-            if (left->n == rigth->n)
-                return (1);
-
-            return (0);
+            if (start->n != current->n)
+                return (0);
         }
+        return (1);
     }
-    return (1);
 }
