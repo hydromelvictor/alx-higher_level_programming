@@ -32,7 +32,7 @@ int is_palindrome(listint_t **head)
     {
         start = *head;
         current = reverse_copy(head, NULL);
-        while (start->next != NULL)
+        while (start != NULL)
         {
             if (start->n != current->n)
                 return (0);
