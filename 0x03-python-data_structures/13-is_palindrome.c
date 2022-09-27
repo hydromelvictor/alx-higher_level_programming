@@ -7,12 +7,13 @@ listint_t *reverse_copy(listint_t **head, listint_t *nil)
 {
     listint_t *old, *pos = nil, *new;
     old = *head;
-
+/*
     new = malloc(sizeof(listint_t));
     if (new == NULL)
         return (NULL);
     
-    new->n = old->n;
+    new->n = old->n;*/
+    new = old;
     new->next = pos;
     pos = new;
     if (old->next != NULL)
