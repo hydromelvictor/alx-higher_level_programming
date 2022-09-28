@@ -1,92 +1,15 @@
-9. Multiply by 2
-mandatory
-Écrivez une fonction qui renvoie un nouveau dictionnaire avec toutes les valeurs multipliées par 2
-
-Prototype : def multiplier_par_2(a_dictionary) :
-Vous pouvez supposer que toutes les valeurs ne sont que des entiers
-Renvoie un nouveau dictionnaire
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a function that returns a new dictionary with all values multiplied by 2
-
-Prototype: def multiply_by_2(a_dictionary):
-You can assume that all values are only integers
-Returns a new dictionary
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 9-main.py
-#!/usr/bin/python3
-multiply_by_2 = __import__('9-multiply_by_2').multiply_by_2
-print_sorted_dictionary = \
-    __import__('6-print_sorted_dictionary').print_sorted_dictionary
-
-a_dictionary = {'John': 12, 'Alex': 8, 'Bob': 14, 'Mike': 14, 'Molly': 16}
-new_dict = multiply_by_2(a_dictionary)
-print_sorted_dictionary(a_dictionary)
-print("--")
-print_sorted_dictionary(new_dict)
-
-guillaume@ubuntu:~/0x04$ ./9-main.py
-Alex: 8
-Bob: 14
-John: 12
-Mike: 14
-Molly: 16
---
-Alex: 16
-Bob: 28
-John: 24
-Mike: 28
-Molly: 32
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 9-multiply_by_2.py
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-10. Best score
-mandatory
-Écrivez une fonction qui renvoie une clé avec la plus grande valeur entière.
-
-Prototype : def best_score(a_dictionary) :
-Vous pouvez supposer que toutes les valeurs ne sont que des entiers
-Si aucun score n'est trouvé, renvoie Aucun
-Vous pouvez supposer que tous les élèves ont un score différent
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a function that returns a key with the biggest integer value.
-
-Prototype: def best_score(a_dictionary):
-You can assume that all values are only integers
-If no score found, return None
-You can assume all students have a different score
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 10-main.py
-#!/usr/bin/python3
-best_score = __import__('10-best_score').best_score
-
-a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
-best_key = best_score(a_dictionary)
-print("Best score: {}".format(best_key))
-
-best_key = best_score(None)
-print("Best score: {}".format(best_key))
-
-guillaume@ubuntu:~/0x04$ ./10-main.py
-Best score: Molly
-Best score: None
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 10-best_score.py
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 11. Multiply by using map
 mandatory
+Écrivez une fonction qui renvoie une liste avec toutes les valeurs multipliées par un nombre sans utiliser de boucles.
 
+Prototype : def multiplier_list_map(ma_liste=[], nombre=0) :
+Renvoie une nouvelle liste :
+Même longueur que my_list
+Chaque valeur doit être multipliée par un nombre
+La liste initiale ne doit pas être modifiée
+Vous n'êtes pas autorisé à importer un module
+Vous devez utiliser la carte
+Votre fichier doit faire 3 lignes maximum
 
 
 Write a function that returns a list with all values multiplied by a number without using any loops.
@@ -120,7 +43,15 @@ File: 11-multiply_list_map.py
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 12. Roman to Integer
 mandatory
+Préparation de l'entretien technique :
 
+Vous n'êtes pas autorisé à rechercher quoi que ce soit sur Google
+Tableau blanc d'abord
+Créez une fonction def roman_to_int(roman_string): qui convertit un chiffre romain en entier.
+
+Vous pouvez supposer que le nombre sera compris entre 1 et 3999.
+def roman_to_int(roman_string) doit retourner un entier
+Si le roman_string n'est pas une chaîne ou None, retourne 0
 
 
 Technical interview preparation:
