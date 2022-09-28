@@ -1,35 +1,3 @@
-13. Weighted average!
-#advanced
-Écrivez une fonction qui renvoie la moyenne pondérée de tous les entiers tuple (<score>, <weight>)
-
-Prototype : def weight_average(my_list=[]) :
-Renvoie 0 si la liste est vide
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a function that returns the weighted average of all integers tuple (<score>, <weight>)
-
-Prototype: def weight_average(my_list=[]):
-Returns 0 if the list is empty
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 100-main.py
-#!/usr/bin/python3
-weight_average = __import__('100-weight_average').weight_average
-
-my_list = [(1, 2), (2, 1), (3, 10), (4, 2)]
-# = ((1 * 2) + (2 * 1) + (3 * 10) + (4 * 2)) / (2 + 1 + 10 + 2)
-result = weight_average(my_list)
-print("Average: {:0.2f}".format(result))
-
-guillaume@ubuntu:~/0x04$ ./100-main.py
-Average: 2.80
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 100-weight_average.py
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 14. Squared by using map
 #advanced
 Écrivez une fonction qui calcule la valeur au carré de tous les entiers d'une matrice à l'aide de map
