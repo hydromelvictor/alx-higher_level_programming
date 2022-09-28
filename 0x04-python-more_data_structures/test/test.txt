@@ -1,59 +1,11 @@
-14. Squared by using map
-#advanced
-Écrivez une fonction qui calcule la valeur au carré de tous les entiers d'une matrice à l'aide de map
-
-Prototype : def square_matrix_map(matrix=[]) :
-matrice est un tableau à 2 dimensions
-Renvoie une nouvelle matrice :
-Même taille que la matrice
-Chaque valeur doit être le carré de la valeur de l'entrée
-La matrice initiale ne doit pas être modifiée
-Vous n'êtes pas autorisé à importer un module
-Vous devez utiliser la carte
-Vous n'êtes pas autorisé à utiliser pendant ou pendant
-Votre fichier doit faire 3 lignes maximum
-
-
-Write a function that computes the square value of all integers of a matrix using map
-
-Prototype: def square_matrix_map(matrix=[]):
-matrix is a 2 dimensional array
-Returns a new matrix:
-Same size as matrix
-Each value should be the square of the value of the input
-Initial matrix should not be modified
-You are not allowed to import any module
-You have to use map
-You are not allowed to use for or while
-Your file should be max 3 lines
-guillaume@ubuntu:~/0x04$ cat 101-main.py
-#!/usr/bin/python3
-square_matrix_map = \
-    __import__('101-square_matrix_map').square_matrix_map
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-new_matrix = square_matrix_map(matrix)
-print(new_matrix)
-print(matrix)
-
-guillaume@ubuntu:~/0x04$ ./101-main.py
-[[1, 4, 9], [16, 25, 36], [49, 64, 81]]
-[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 101-square_matrix_map.py
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 15. Delete by value
 #advanced
+Écrivez une fonction qui supprime les clés avec une valeur spécifique dans un dictionnaire.
 
+Prototype : def complex_delete(a_dictionary, value) :
+Si la valeur n'existe pas, le dictionnaire ne changera pas
+Toutes les clés ayant la valeur recherchée doivent être supprimées
+Vous n'êtes pas autorisé à importer un module
 
 
 Write a function that deletes keys with a specific value in a dictionary.
