@@ -1,66 +1,9 @@
-3. Present in both
-mandatory
-Écrivez une fonction qui renvoie un ensemble d'éléments communs dans deux ensembles.
-
-Prototype : def common_elements(set_1, set_2) :
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a function that returns a set of common elements in two sets.
-
-Prototype: def common_elements(set_1, set_2):
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 3-main.py
-#!/usr/bin/python3
-common_elements = __import__('3-common_elements').common_elements
-
-set_1 = { "Python", "C", "Javascript" }
-set_2 = { "Bash", "C", "Ruby", "Perl" }
-c_set = common_elements(set_1, set_2)
-print(sorted(list(c_set)))
-
-guillaume@ubuntu:~/0x04$ ./3-main.py
-['C']
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 3-common_elements.py
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-4. Only differents
-mandatory
-Écrivez une fonction qui renvoie un ensemble de tous les éléments présents dans un seul ensemble.
-
-Prototype : def only_diff_elements(set_1, set_2) :
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a function that returns a set of all elements present in only one set.
-
-Prototype: def only_diff_elements(set_1, set_2):
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 4-main.py
-#!/usr/bin/python3
-only_diff_elements = __import__('4-only_diff_elements').only_diff_elements
-
-set_1 = { "Python", "C", "Javascript" }
-set_2 = { "Bash", "C", "Ruby", "Perl" }
-od_set = only_diff_elements(set_1, set_2)
-print(sorted(list(od_set)))
-
-guillaume@ubuntu:~/0x04$ ./4-main.py
-['Bash', 'Javascript', 'Perl', 'Python', 'Ruby']
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 4-only_diff_elements.py
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 5. Number of keys
 mandatory
+Écrivez une fonction qui renvoie le nombre de clés dans un dictionnaire.
 
+Prototype : def number_keys(a_dictionary) :
+Vous n'êtes pas autorisé à importer un module
 
 
 Write a function that returns the number of keys in a dictionary.
@@ -86,6 +29,14 @@ File: 5-number_keys.py
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 6. Print sorted dictionary
 mandatory
+Écrivez une fonction qui imprime un dictionnaire par touches ordonnées.
+
+Prototype : def print_sorted_dictionary(a_dictionary) :
+Vous pouvez supposer que toutes les clés sont des chaînes
+Les clés doivent être triées par ordre alphabétique
+Trier uniquement les clés du premier niveau (ne pas trier les clés d'un dictionnaire à l'intérieur du dictionnaire principal)
+Les valeurs du dictionnaire peuvent avoir n'importe quel type
+Vous n'êtes pas autorisé à importer un module
 
 
 
