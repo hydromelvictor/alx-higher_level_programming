@@ -1,75 +1,13 @@
-5. Number of keys
-mandatory
-Écrivez une fonction qui renvoie le nombre de clés dans un dictionnaire.
-
-Prototype : def number_keys(a_dictionary) :
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a function that returns the number of keys in a dictionary.
-
-Prototype: def number_keys(a_dictionary):
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 5-main.py
-#!/usr/bin/python3
-number_keys = __import__('5-number_keys').number_keys
-
-a_dictionary = { 'language': "C", 'number': 13, 'track': "Low level" }
-nb_keys = number_keys(a_dictionary)
-print("Number of keys: {:d}".format(nb_keys))
-
-guillaume@ubuntu:~/0x04$ ./5-main.py
-Number of keys: 3
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 5-number_keys.py
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-6. Print sorted dictionary
-mandatory
-Écrivez une fonction qui imprime un dictionnaire par touches ordonnées.
-
-Prototype : def print_sorted_dictionary(a_dictionary) :
-Vous pouvez supposer que toutes les clés sont des chaînes
-Les clés doivent être triées par ordre alphabétique
-Trier uniquement les clés du premier niveau (ne pas trier les clés d'un dictionnaire à l'intérieur du dictionnaire principal)
-Les valeurs du dictionnaire peuvent avoir n'importe quel type
-Vous n'êtes pas autorisé à importer un module
-
-
-
-Write a function that prints a dictionary by ordered keys.
-
-Prototype: def print_sorted_dictionary(a_dictionary):
-You can assume that all keys are strings
-Keys should be sorted by alphabetic order
-Only sort keys of the first level (don’t sort keys of a dictionary inside the main dictionary)
-Dictionary values can have any type
-You are not allowed to import any module
-guillaume@ubuntu:~/0x04$ cat 6-main.py
-#!/usr/bin/python3
-print_sorted_dictionary = __import__('6-print_sorted_dictionary').print_sorted_dictionary
-
-a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
-print_sorted_dictionary(a_dictionary)
-
-guillaume@ubuntu:~/0x04$ ./6-main.py
-Number: 89
-ids: [1, 2, 3]
-language: C
-track: Low level
-guillaume@ubuntu:~/0x04$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x04-python-more_data_structures
-File: 6-print_sorted_dictionary.py
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 7. Update dictionary
 mandatory
+Écrivez une fonction qui remplace ou ajoute clé/valeur dans un dictionnaire.
 
+Prototype : def update_dictionary(a_dictionary, clé, valeur) :
+l'argument clé sera toujours une chaîne
+l'argument de valeur sera de n'importe quel type
+Si une clé existe dans le dictionnaire, la valeur sera remplacée
+Si une clé n'existe pas dans le dictionnaire, elle sera créée
+Vous n'êtes pas autorisé à importer un module
 
 
 Write a function that replaces or adds key/value in a dictionary.
@@ -127,7 +65,12 @@ File: 7-update_dictionary.py
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 8. Simple delete by key
 mandatory
+Écrivez une fonction qui supprime une clé dans un dictionnaire.
 
+Prototype : def simple_delete(a_dictionary, key="") :
+l'argument clé sera toujours une chaîne
+Si une clé n'existe pas, le dictionnaire ne changera pas
+Vous n'êtes pas autorisé à importer un module
 
 
 Write a function that deletes a key in a dictionary.
