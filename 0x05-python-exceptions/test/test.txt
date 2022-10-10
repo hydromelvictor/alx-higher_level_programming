@@ -110,6 +110,24 @@ File: 1-safe_print_integer.py
 ####################################################################################
 2. Print and count integers
 mandatory
+Écrivez une fonction qui affiche les x premiers éléments 
+d'une liste et uniquement des entiers.
+
+Prototype : def safe_print_list_integers(my_list=[], x=0) :
+ma_liste peut contenir n'importe quel type (entier, chaîne, etc.)
+Tous les nombres entiers doivent être imprimés sur la même ligne 
+suivis d'une nouvelle ligne -
+autre type de valeur dans la liste doit être ignoré (en silence).
+x représente le nombre d'éléments auxquels accéder dans my_list
+x peut être plus grand que la longueur de my_list - si c'est le cas,
+une exception devrait se produire
+Renvoie le nombre réel d'entiers imprimés
+Vous devez utiliser try: / sauf:
+Vous devez utiliser "{:d}".format() pour imprimer un entier
+Vous n'êtes pas autorisé à importer un module
+Vous n'êtes pas autorisé à utiliser len()
+
+
 Write a function that prints the first x elements of a list and only integers.
 
 Prototype: def safe_print_list_integers(my_list=[], x=0):
