@@ -54,6 +54,19 @@ File: 0-safe_print_list.py
 ####################################################################################
 1. Safe printing of an integers list
 mandatory
+Écrivez une fonction qui imprime un entier avec "{:d}".format().
+
+Prototype : def safe_print_integer(valeur) :
+la valeur peut être de n'importe quel type (entier, chaîne, etc.)
+L'entier doit être imprimé suivi d'une nouvelle ligne
+Renvoie True si la valeur a été correctement imprimée 
+(cela signifie que la valeur est un entier) Sinon, renvoie Faux
+Vous devez utiliser try: / sauf:
+Vous devez utiliser "{:d}".format() pour imprimer en entier
+Vous n'êtes pas autorisé à importer un module
+Vous n'êtes pas autorisé à utiliser type()
+
+
 Write a function that prints an integer with "{:d}".format().
 
 Prototype: def safe_print_integer(value):
