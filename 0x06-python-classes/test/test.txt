@@ -29,7 +29,22 @@ File: 0-square.py
 
 1. Square with size
 mandatory
+Ecrire une classe Square qui définit un carré par : (basé sur 0-square.py)
 
+Attribut d'instance privée : taille
+Instanciation avec taille (pas de vérification type/valeur)
+Vous n'êtes pas autorisé à importer un module
+Pourquoi?
+
+Pourquoi la taille est un attribut privé ?
+
+La taille d'un carré est cruciale pour un carré, beaucoup de choses en dépendent
+(calcul de surface, etc.), donc vous, en tant que constructeur de classe, 
+devez contrôler
+le type et la valeur de cet attribut. Une façon d'avoir le contrôle est de garder
+cela en privé. Vous verrez dans les tâches suivantes comment obtenir, 
+mettre à jour et valider
+la valeur de taille.
 
 
 
