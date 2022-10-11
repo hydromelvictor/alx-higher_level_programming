@@ -1,74 +1,17 @@
-2. Print and count integers
-mandatory
-Écrivez une fonction qui affiche les x premiers éléments 
-d'une liste et uniquement des entiers.
-
-Prototype : def safe_print_list_integers(my_list=[], x=0) :
-ma_liste peut contenir n'importe quel type (entier, chaîne, etc.)
-Tous les nombres entiers doivent être imprimés sur la même ligne 
-suivis d'une nouvelle ligne -
-autre type de valeur dans la liste doit être ignoré (en silence).
-x représente le nombre d'éléments auxquels accéder dans my_list
-x peut être plus grand que la longueur de my_list - si c'est le cas,
-une exception devrait se produire
-Renvoie le nombre réel d'entiers imprimés
-Vous devez utiliser try: / sauf:
-Vous devez utiliser "{:d}".format() pour imprimer un entier
-Vous n'êtes pas autorisé à importer un module
-Vous n'êtes pas autorisé à utiliser len()
-
-
-Write a function that prints the first x elements of a list and only integers.
-
-Prototype: def safe_print_list_integers(my_list=[], x=0):
-my_list can contain any type (integer, string, etc.)
-All integers have to be printed on the same line followed by a new line - 
-other type of value in the list must be skipped (in silence).
-x represents the number of elements to access in my_list
-x can be bigger than the length of my_list - if it’s the case, 
-an exception is expected to occur
-Returns the real number of integers printed
-You have to use try: / except:
-You have to use "{:d}".format() to print an integer
-You are not allowed to import any module
-You are not allowed to use len()
-guillaume@ubuntu:~/0x05$ cat 2-main.py
-#!/usr/bin/python3
-safe_print_list_integers = \
-    __import__('2-safe_print_list_integers').safe_print_list_integers
-
-my_list = [1, 2, 3, 4, 5]
-
-nb_print = safe_print_list_integers(my_list, 2)
-print("nb_print: {:d}".format(nb_print))
-
-my_list = [1, 2, 3, "School", 4, 5, [1, 2, 3]]
-nb_print = safe_print_list_integers(my_list, len(my_list))
-print("nb_print: {:d}".format(nb_print))
-
-nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
-print("nb_print: {:d}".format(nb_print))
-
-guillaume@ubuntu:~/0x05$ ./2-main.py
-12
-nb_print: 2
-12345
-nb_print: 5
-12345Traceback (most recent call last):
-  File "./2-main.py", line 14, in <module>
-    nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
-  File "/0x05/2-safe_print_list_integers.py", line 7, in safe_print_list_integers
-    print("{:d}".format(my_list[i]), end="")
-IndexError: list index out of range
-guillaume@ubuntu:~/0x05$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x05-python-exceptions
-File: 2-safe_print_list_integers.py
-####################################################################################
 3. Integers division with debug
 mandatory
+Écrivez une fonction qui divise 2 nombres entiers et imprime le résultat.
+
+Prototype : def safe_print_division(a, b) :
+On peut supposer que a et b sont des entiers
+Le résultat de la division doit s'imprimer sur la finale :
+section précédée du résultat intérieur :
+Renvoie la valeur de la division, sinon : Aucun
+Vous devez utiliser try:/except:/finally:
+Vous devez utiliser "{}".format() pour imprimer le résultat
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a function that divides 2 integers and prints the result.
 
 Prototype: def safe_print_division(a, b):
@@ -107,6 +50,24 @@ File: 3-safe_print_division.py
 ####################################################################################
 4. Divide a list
 mandatory
+Écrivez une fonction qui divise élément par élément 2 listes.
+
+Prototype : def list_division(my_list_1, my_list_2, list_length) :
+my_list_1 et my_list_2 peuvent contenir n'importe quel type (entier, chaîne, etc.)
+list_length peut être plus grand que la longueur des deux listes
+Renvoie une nouvelle liste (length = list_length) avec toutes les divisions
+Si 2 éléments ne peuvent pas être divisés, le résultat de la division 
+doit être égal à 0
+Si un élément n'est pas un entier ou un flottant :
+impression : mauvais type
+Si la division ne peut pas être faite (/0):
+impression : division par 0
+Si my_list_1 ou my_list_2 est trop court
+impression : hors plage
+Vous devez utiliser try:/except:/finally:
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a function that divides element by element 2 lists.
 
 Prototype: def list_division(my_list_1, my_list_2, list_length):
@@ -154,6 +115,12 @@ File: 4-list_division.py
 ####################################################################################
 5. Raise exception
 mandatory
+Écrivez une fonction qui lève une exception de type.
+
+Prototype : def raise_exception() :
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a function that raises a type exception.
 
 Prototype: def raise_exception():
@@ -178,6 +145,12 @@ File: 5-raise_exception.py
 ####################################################################################
 6. Raise a message
 mandatory
+Écrivez une fonction qui déclenche une exception de nom avec un message.
+
+Prototype : def raise_exception_msg(message="") :
+Vous n'êtes pas autorisé à importer un module
+
+
 Write a function that raises a name exception with a message.
 
 Prototype: def raise_exception_msg(message=""):
