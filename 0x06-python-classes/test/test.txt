@@ -1,61 +1,33 @@
-3. Area of a square
+4. Access and update private attribute
 mandatory
-Écrivez une classe Square qui définit un carré par : (basé sur 2-square.py)
+Écrivez une classe Square qui définit un carré par : (basé sur 3-square.py)
 
-Attribut d'instance privée : taille
-Instanciation avec taille facultative : def __init__(self, size=0) :
+Attribut d'instance privée : taille :
+propriété def size(self) : pour la récupérer
+propriété setter def size(self, value): pour le définir:
 size doit être un entier, sinon déclencher une exception TypeError avec
 la taille du message doit être un entier
 si la taille est inférieure à 0, déclenche une exception ValueError avec le
 la taille du message doit être >= 0
+Instanciation avec taille facultative : def __init__(self, size=0) :
 Méthode d'instance publique : def area(self) : qui renvoie la zone carrée actuelle
 Vous n'êtes pas autorisé à importer un module
+Pourquoi?
+
+Pourquoi un getter et un setter ?
+
+Rappel : la taille est un attribut privé. Nous avons fait cela pour 
+nous assurer que nous contrôlons
+le type et la valeur. Les méthodes getter et setter ne sont pas 100% Python, 
+mais plus OOP.
+Avec eux, vous pourrez valider l'attribution d'un attribut privé et
+définissez également comment l'obtention de la valeur d'attribut sera disponible 
+de l'extérieur - par copie ?
+par devoir ? etc. En outre, l'ajout d'une validation de type/valeur dans le setter
+centralisez la logique, puisque vous le ferez en un seul endroit.
 
 
-Write a class Square that defines a square by: (based on 2-square.py)
 
-Private instance attribute: size
-Instantiation with optional size: def __init__(self, size=0):
-size must be an integer, otherwise raise a TypeError exception with 
-the message size must be an integer
-if size is less than 0, raise a ValueError exception with the 
-message size must be >= 0
-Public instance method: def area(self): that returns the current square area
-You are not allowed to import any module
-guillaume@ubuntu:~/0x06$ cat 3-main.py
-#!/usr/bin/python3
-Square = __import__('3-square').Square
-
-my_square_1 = Square(3)
-print("Area: {}".format(my_square_1.area()))
-
-try:
-    print(my_square_1.size)
-except Exception as e:
-    print(e)
-
-try:
-    print(my_square_1.__size)
-except Exception as e:
-    print(e)
-
-my_square_2 = Square(5)
-print("Area: {}".format(my_square_2.area()))
-
-guillaume@ubuntu:~/0x06$ ./3-main.py
-Area: 9
-'Square' object has no attribute 'size'
-'Square' object has no attribute '__size'
-Area: 25
-guillaume@ubuntu:~/0x06$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x06-python-classes
-File: 3-square.py
-   
-4. Access and update private attribute
-mandatory
 Write a class Square that defines a square by: (based on 3-square.py)
 
 Private instance attribute: size:
