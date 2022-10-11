@@ -1,71 +1,17 @@
-1. Square with size
-mandatory
-Ecrire une classe Square qui définit un carré par : (basé sur 0-square.py)
-
-Attribut d'instance privée : taille
-Instanciation avec taille (pas de vérification type/valeur)
-Vous n'êtes pas autorisé à importer un module
-Pourquoi?
-
-Pourquoi la taille est un attribut privé ?
-
-La taille d'un carré est cruciale pour un carré, beaucoup de choses en dépendent
-(calcul de surface, etc.), donc vous, en tant que constructeur de classe, 
-devez contrôler
-le type et la valeur de cet attribut. Une façon d'avoir le contrôle est de garder
-cela en privé. Vous verrez dans les tâches suivantes comment obtenir, 
-mettre à jour et valider
-la valeur de taille.
-
-
-
-Write a class Square that defines a square by: (based on 0-square.py)
-
-Private instance attribute: size
-Instantiation with size (no type/value verification)
-You are not allowed to import any module
-Why?
-
-Why size is private attribute?
-
-The size of a square is crucial for a square, many things depend of it 
-(area computation, etc.), so you, as class builder, must control 
-the type and value of this attribute. One way to have the control is to keep 
-it privately. You will see in next tasks how to get, update and validate 
-the size value.
-
-guillaume@ubuntu:~/0x06$ cat 1-main.py
-#!/usr/bin/python3
-Square = __import__('1-square').Square
-
-my_square = Square(3)
-print(type(my_square))
-print(my_square.__dict__)
-
-try:
-    print(my_square.size)
-except Exception as e:
-    print(e)
-
-try:
-    print(my_square.__size)
-except Exception as e:
-    print(e)
-
-guillaume@ubuntu:~/0x06$ ./1-main.py
-<class '1-square.Square'>
-{'_Square__size': 3}
-'Square' object has no attribute 'size'
-'Square' object has no attribute '__size'
-guillaume@ubuntu:~/0x06$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x06-python-classes
-File: 1-square.py
-   
 2. Size validation
 mandatory
+Écrivez une classe Square qui définit un carré par : (basé sur 1-square.py)
+
+Attribut d'instance privée : taille
+Instanciation avec taille facultative : def __init__(self, size=0) :
+size doit être un entier, sinon déclencher une exception TypeError avec
+la taille du message doit être un entier
+si la taille est inférieure à 0, déclenche une exception ValueError avec le message
+la taille doit être >= 0
+Vous n'êtes pas autorisé à importer un module
+
+
+
 Write a class Square that defines a square by: (based on 1-square.py)
 
 Private instance attribute: size
