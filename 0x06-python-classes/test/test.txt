@@ -1,85 +1,23 @@
-4. Access and update private attribute
+5. Printing a square
 mandatory
-Écrivez une classe Square qui définit un carré par : (basé sur 3-square.py)
+Écrivez une classe Square qui définit un carré par : (basé sur 4-square.py)
 
 Attribut d'instance privée : taille :
 propriété def size(self) : pour la récupérer
 propriété setter def size(self, value): pour le définir:
 size doit être un entier, sinon déclencher une exception TypeError avec
 la taille du message doit être un entier
-si la taille est inférieure à 0, déclenche une exception ValueError avec le
+si la taille est inférieure à 0, déclenche une exception ValueError avec
 la taille du message doit être >= 0
 Instanciation avec taille facultative : def __init__(self, size=0) :
 Méthode d'instance publique : def area(self) : qui renvoie la zone carrée actuelle
+Méthode d'instance publique : def my_print(self) : qui imprime dans stdout
+le carré avec le caractère # :
+si size est égal à 0, affiche une ligne vide
 Vous n'êtes pas autorisé à importer un module
-Pourquoi?
-
-Pourquoi un getter et un setter ?
-
-Rappel : la taille est un attribut privé. Nous avons fait cela pour 
-nous assurer que nous contrôlons
-le type et la valeur. Les méthodes getter et setter ne sont pas 100% Python, 
-mais plus OOP.
-Avec eux, vous pourrez valider l'attribution d'un attribut privé et
-définissez également comment l'obtention de la valeur d'attribut sera disponible 
-de l'extérieur - par copie ?
-par devoir ? etc. En outre, l'ajout d'une validation de type/valeur dans le setter
-centralisez la logique, puisque vous le ferez en un seul endroit.
 
 
 
-Write a class Square that defines a square by: (based on 3-square.py)
-
-Private instance attribute: size:
-property def size(self): to retrieve it
-property setter def size(self, value): to set it:
-size must be an integer, otherwise raise a TypeError exception with 
-the message size must be an integer
-if size is less than 0, raise a ValueError exception with the 
-message size must be >= 0
-Instantiation with optional size: def __init__(self, size=0):
-Public instance method: def area(self): that returns the current square area
-You are not allowed to import any module
-Why?
-
-Why a getter and setter?
-
-Reminder: size is a private attribute. We did that to make sure we control 
-the type and value. Getter and setter methods are not 100% Python, but more OOP. 
-With them, you will be able to validate the assignment of a private attribute and 
-also define how getting the attribute value will be available from outside - by copy? 
-by assignment? etc. Also, adding type/value validation in the setter will 
-centralize the logic, since you will do it in only one place.
-
-guillaume@ubuntu:~/0x06$ cat 4-main.py
-#!/usr/bin/python3
-Square = __import__('4-square').Square
-
-my_square = Square(89)
-print("Area: {} for size: {}".format(my_square.area(), my_square.size))
-
-my_square.size = 3
-print("Area: {} for size: {}".format(my_square.area(), my_square.size))
-
-try:
-    my_square.size = "5 feet"
-    print("Area: {} for size: {}".format(my_square.area(), my_square.size))
-except Exception as e:
-    print(e)
-
-guillaume@ubuntu:~/0x06$ ./4-main.py
-Area: 7921 for size: 89
-Area: 9 for size: 3
-size must be an integer
-guillaume@ubuntu:~/0x06$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x06-python-classes
-File: 4-square.py
-   
-5. Printing a square
-mandatory
 Write a class Square that defines a square by: (based on 4-square.py)
 
 Private instance attribute: size:
