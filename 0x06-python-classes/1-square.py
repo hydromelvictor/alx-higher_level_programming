@@ -3,4 +3,5 @@
 class Square:
     """ definition de la fonction init de square"""
     def __init__(self, size):
+        """init function"""
         self.__size = size
