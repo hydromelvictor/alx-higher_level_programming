@@ -1,6 +1,6 @@
-5. Printing a square
+6. Coordinates of a square
 mandatory
-Écrivez une classe Square qui définit un carré par : (basé sur 4-square.py)
+Écrivez une classe Square qui définit un carré par : (basé sur 5-square.py)
 
 Attribut d'instance privée : taille :
 propriété def size(self) : pour la récupérer
@@ -9,76 +9,24 @@ size doit être un entier, sinon déclencher une exception TypeError avec
 la taille du message doit être un entier
 si la taille est inférieure à 0, déclenche une exception ValueError avec
 la taille du message doit être >= 0
-Instanciation avec taille facultative : def __init__(self, size=0) :
+Attribut d'instance privée : position :
+propriété def position(self) : pour la récupérer
+propriété setter def position(self, value): pour le définir:
+position doit être un tuple de 2 entiers positifs,
+sinon lever une exception TypeError avec la position du message doit être un tuple
+ de 2 entiers positifs
+Instanciation avec taille facultative et optionnelle
+position : def __init__(soi, taille=0, position=(0, 0)) :
 Méthode d'instance publique : def area(self) : qui renvoie la zone carrée actuelle
-Méthode d'instance publique : def my_print(self) : qui imprime dans stdout
-le carré avec le caractère # :
+Méthode d'instance publique : def my_print(self) : qui imprime en stdout le carré avec
+le personnage #:
 si size est égal à 0, affiche une ligne vide
+la position doit être utilisée en utilisant l'espace - Ne remplissez pas les lignes en
+espaces lorsque position[1] > 0
 Vous n'êtes pas autorisé à importer un module
 
 
 
-Write a class Square that defines a square by: (based on 4-square.py)
-
-Private instance attribute: size:
-property def size(self): to retrieve it
-property setter def size(self, value): to set it:
-size must be an integer, otherwise raise a TypeError exception with 
-the message size must be an integer
-if size is less than 0, raise a ValueError exception with 
-the message size must be >= 0
-Instantiation with optional size: def __init__(self, size=0):
-Public instance method: def area(self): that returns the current square area
-Public instance method: def my_print(self): that prints in stdout 
-the square with the character #:
-if size is equal to 0, print an empty line
-You are not allowed to import any module
-guillaume@ubuntu:~/0x06$ cat 5-main.py
-#!/usr/bin/python3
-Square = __import__('5-square').Square
-
-my_square = Square(3)
-my_square.my_print()
-
-print("--")
-
-my_square.size = 10
-my_square.my_print()
-
-print("--")
-
-my_square.size = 0
-my_square.my_print()
-
-print("--")
-
-guillaume@ubuntu:~/0x06$ ./5-main.py
-###
-###
-###
---
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
---
-
---
-guillaume@ubuntu:~/0x06$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x06-python-classes
-File: 5-square.py
-   
-6. Coordinates of a square
-mandatory
 Write a class Square that defines a square by: (based on 5-square.py)
 
 Private instance attribute: size:

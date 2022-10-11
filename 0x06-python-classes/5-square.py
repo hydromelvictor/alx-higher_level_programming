@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """tache 2 description d'une class vide"""
+
+
 class Square:
     """ definition de la fonction init de square"""
     def __init__(self, size=0):
@@ -32,6 +34,7 @@ class Square:
         return self.__size
 
     def my_print(self):
+        """printf function"""
         if self.__size == 0:
             print()
         for i in range(self.__size):
