@@ -8,17 +8,17 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """init function"""
 
-        if not(isinstance(size, int)):
+        if not (isinstance(size, int)):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        elif not(isinstance(position, tuple)) or len(position) != 2 or \
-            position[0] < 0 or position[1] < 0:
+        elif not (isinstance(position, tuple)) or len(position) != 2 \
+                or position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__size = size
             self.__position = position
-    
+
     def area(self):
         """the square area"""
         return self.__size ** 2
@@ -31,7 +31,7 @@ class Square:
     @size.setter
     def size(self, value):
         """setter function for size"""
-        if not(isinstance(value, int)):
+        if not (isinstance(value, int)):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -59,8 +59,8 @@ class Square:
     @position.setter
     def position(self, value):
         """setter functions for position"""
-        if not(isinstance(value, tuple)) or len(value) != 2 or \
-            value[0] < 0 or value[1] < 0:
+        if not (isinstance(value, tuple)) or len(value) != 2 or value[0] < 0 \
+                or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
