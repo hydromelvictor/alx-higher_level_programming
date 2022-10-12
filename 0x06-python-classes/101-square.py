@@ -67,6 +67,7 @@ class Square:
         return self.__position
 
     def __str__(self):
+        """string printer"""
         string = ""
         if self.__size == 0:
             return "\n"
