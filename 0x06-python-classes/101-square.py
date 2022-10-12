@@ -77,8 +77,6 @@ class Square:
         if self.__size == 0:
             return ""
 
-        string += "\n" * self.__position[1]
-        s += (" " * self.__position[0] + "#" * self.__size + "\n")
-        s = s * self.__size
-        string += s
+        string += "\n" * self.__position[1] + (" " * self.__position[0] + "#" * self.__size + "\n") * self.__size
+
         return string[:-1]
