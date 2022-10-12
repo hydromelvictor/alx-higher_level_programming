@@ -70,11 +70,12 @@ class Square:
         """string printer"""
         string = ""
         if self.__size == 0:
-            return "\n"
+            string = "\n"
         else:
             for i in range(self.__size):
                 for j in range(self.__position[0]):
                     string += " "
+                    
                 for k in range(self.__size):
                     string += "#"
                 string += "\n"
