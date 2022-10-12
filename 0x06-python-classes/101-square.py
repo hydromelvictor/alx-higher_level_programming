@@ -43,6 +43,11 @@ class Square:
         """printf function"""
         if self.__size == 0:
             print()
+            return
+
+        for i in range(self.__position[1]):
+            print()
+
         for i in range(self.__size):
             for k in range(self.__position[0]):
                 print(" ", end="")
@@ -71,12 +76,16 @@ class Square:
         string = ""
         if self.__size == 0:
             string = "\n"
-        else:
-            for i in range(self.__size):
-                for j in range(self.__position[0]):
-                    string += " "
+            return string
+            
+        for i in range(self.__position[1]):
+            string += "\n"
 
-                for k in range(self.__size):
-                    string += "#"
-                string += "\n"
+        for i in range(self.__size):
+            for j in range(self.__position[0]):
+                string += " "
+
+            for k in range(self.__size):
+                string += "#"
+            string += "\n"
         return string
