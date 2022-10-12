@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 """tache 2 description d'une class vide"""
+
+
 class Square:
     """ definition de la fonction init de square"""
+
     def __init__(self, size=0, position=(0, 0)):
         """init function"""
+
         if not(isinstance(size, int)):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        elif not(isinstance(position, tuple)) or len(position) != 2 :
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif position[0] < 0 or position[1] < 0:
+        elif not(isinstance(position, tuple)) or len(position) != 2 or \
+            position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__size = size
@@ -41,9 +44,10 @@ class Square:
         if self.__size == 0:
             print()
         for i in range(self.__size):
+            for k in range(self.__position[0]):
+                print(" ", end="")
+
             for j in range(self.__size):
-                for k in range(self.__position):
-                    print(" ", end="")
                 print("#", end="")
             print()
 
@@ -55,26 +59,9 @@ class Square:
     @position.setter
     def position(self, value):
         """setter functions for position"""
-        if not(isinstance(value, tuple)) or len(value) != 2 :
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[1] < 0:
+        if not(isinstance(value, tuple)) or len(value) != 2 or \
+            value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
         return self.__position
-
-
-my_square_1 = Square(3)
-my_square_1.my_print()
-
-print("--")
-
-my_square_2 = Square(3, (1, 1))
-my_square_2.my_print()
-
-print("--")
-
-my_square_3 = Square(3, (3, 0))
-my_square_3.my_print()
-
-print("--")

@@ -93,6 +93,32 @@ File: 6-square.py
    
 7. Singly linked list
 #advanced
+Écrivez une classe Node qui définit un nœud d'une liste chaînée par :
+
+Attribut d'instance privée : données :
+propriété def data(self) : pour la récupérer
+propriété setter def data(self, value): pour le définir:
+les données doivent être un entier, sinon déclenchez une exception TypeError avec
+les données du message doivent être un entier
+Attribut d'instance privée : next_node :
+property def next_node(self) : pour le récupérer
+property setter def next_node(self, value): pour le définir :
+next_node peut être None ou doit être un Node, sinon déclencher une exception TypeError
+avec le message next_node doit être un objet Node
+Instanciation avec data et next_node : def __init__(self, data, next_node=None) :
+Et, écrivez une classe SinglyLinkedList qui définit une liste chaînée par :
+
+Attribut d'instance privée : head (pas de setter ni de getter)
+Instanciation simple : def __init__(self) :
+Doit être imprimable :
+imprimer toute la liste dans stdout
+un numéro de nœud par ligne
+Méthode d'instance publique : def sorted_insert(self, value) : qui insère un
+nouveau nœud dans la bonne position triée dans la liste (ordre croissant)
+Vous n'êtes pas autorisé à importer un module
+
+
+
 Write a class Node that defines a node of a singly linked list by:
 
 Private instance attribute: data:
@@ -155,6 +181,33 @@ File: 100-singly_linked_list.py
    
 8. Print Square instance
 #advanced
+Écrivez une classe Square qui définit un carré par : (basé sur 6-square.py)
+
+Attribut d'instance privée : taille :
+propriété def size(self) : pour la récupérer
+propriété setter def size(self, value): pour le définir:
+size doit être un entier, sinon déclencher une exception TypeError avec
+la taille du message doit être un entier
+si la taille est inférieure à 0, déclenche une exception ValueError avec
+la taille du message doit être >= 0
+Attribut d'instance privée : position :
+propriété def position(self) : pour la récupérer
+propriété setter def position(self, value): pour le définir:
+position doit être un tuple de 2 entiers positifs,
+sinon lever une exception TypeError avec la position du message doit être un tuple
+de 2 entier positif
+Instanciation avec taille facultative et optionnelle
+position : def __init__(soi, taille=0, position=(0, 0)) :
+Méthode d'instance publique : def area(self) : qui renvoie la zone carrée actuelle
+Méthode d'instance publique : def my_print(self) :
+qui imprime en stdout le carré avec le caractère # :
+si size est égal à 0, affiche une ligne vide
+la position doit être utilisée en utilisant l'espace
+L'impression d'une instance Square devrait avoir le même comportement que my_print()
+Vous n'êtes pas autorisé à importer un module
+
+
+
 Write a class Square that defines a square by: (based on 6-square.py)
 
 Private instance attribute: size:
@@ -213,6 +266,23 @@ File: 101-square.py
    
 9. Compare 2 squares
 #advanced
+Écrivez une classe Square qui définit un carré par : (basé sur 4-square.py)
+
+Attribut d'instance privée : taille :
+propriété def size(self) : pour la récupérer
+propriété setter def size(self, value): pour le définir:
+size doit être un nombre (float ou entier), sinon déclencher une exception TypeError
+avec la taille du message doit être un nombre
+si la taille est inférieure à 0, déclenche une exception ValueError avec
+la taille du message doit être >= 0
+Instanciation avec taille : def __init__(self, size=0) :
+Méthode d'instance publique : def area(self) : qui renvoie la zone carrée actuelle
+L'instance carrée peut répondre aux comparateurs :
+==, !=, >, >=, < et <= basés sur la surface carrée
+Vous n'êtes pas autorisé à importer un module
+
+
+
 Write a class Square that defines a square by: (based on 4-square.py)
 
 Private instance attribute: size:
