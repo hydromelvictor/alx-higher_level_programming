@@ -2,9 +2,6 @@
 """tache 2 description d'une class vide"""
 
 
-from numpy import square
-
-
 class Square:
     """ definition de la fonction init de square"""
     def __init__(self, size=0):
