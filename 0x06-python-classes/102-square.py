@@ -36,7 +36,6 @@ class Square:
             self.__size = value
         return self.__size
 
-    
     def __eq__(self, square):
         """equals"""
         return self.area == square.area
@@ -60,19 +59,3 @@ class Square:
     def __ge__(self, square):
         """inf or equals"""
         return self.area >= square.area
-
-s_5 = Square(5)
-s_6 = Square(6)
-
-if s_5 < s_6:
-    print("Square 5 < Square 6")
-if s_5 <= s_6:
-    print("Square 5 <= Square 6")
-if s_5 == s_6:
-    print("Square 5 == Square 6")
-if s_5 != s_6:
-    print("Square 5 != Square 6")
-if s_5 > s_6:
-    print("Square 5 > Square 6")
-if s_5 >= s_6:
-    print("Square 5 >= Square 6")
