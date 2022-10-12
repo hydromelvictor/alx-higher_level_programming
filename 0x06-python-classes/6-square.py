@@ -42,7 +42,8 @@ class Square:
     def my_print(self):
         """printf function"""
         if self.__size == 0:
-            return ""
+            print()
+            return
 
         for i in range(self.__position[1]):
             print()
