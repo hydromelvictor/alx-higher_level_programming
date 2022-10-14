@@ -1,0 +1,106 @@
+the ''0-add_integer'' module
+========================
+
+
+Using ''add_integer''
+---------------------
+
+    Importation
+        >>> add_integer = __import__("0-add_integer").add_integer
+
+    Module doc
+        >>> mod = __import__("0-add_integer").__doc__
+        >>> len(mod) > 1
+        True
+
+    Function doc
+        >>> func = __import__("0-add_integer").add_integer.__doc__
+        >>> len(func) > 1
+        True
+
+    function test
+        normal number positive
+        >>> add_integer(2, 7)
+        9
+
+        normal nomber negative
+        >>> add_integer(-2, -5)
+        -7
+
+        normal number positive and negative
+        >>> add_integer(2, -4)
+        -2
+
+        normal number negative and positive
+        >>> add_integer(-1, 3)
+        2
+
+        normal float number positive
+        >>> add_integer(2.0, 15.0)
+        17
+
+        >>> add_integer(5.1, 3.8)
+        8
+
+        >>> add_integer(0.1, 8.0)
+        8
+
+        normal float number negative
+        >>> add_integer(-4.0, 2.8)
+        -2
+
+        >>> add_integer(-7.2, 0.0)
+        -7
+
+        normal float number and integer
+        >>> add_integer(4.1, 3)
+        7
+
+        >>> add_integer(-2.0, -6)
+        -8
+
+        normal integer and float
+        >>> add_integer(0, 8.0)
+        8
+
+        >>> add_integer(-7, -2.9)
+        -9
+
+        >>> add_integer(1, -9.0)
+        -8
+
+        normal large number
+        >>> add_integer(1e800, 3)
+        Traceback (most recent call last):
+            ...
+        OverflowError: a to large
+
+        >>> add_integer(0, 1e975)
+        Traceback (most recent call last):
+            ...
+        OverflowError: b to large
+
+        resultat for list
+        >>> [add_integer(a, a + 1) for a in range(10)]
+        [1, 3, 5, 7, 9, 11, 13, 15, 16, 19]
+
+        error entry
+        >>> add_integer("2", 4)
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+
+        >>> add_integer(-6.0, [1])
+        Traceback (most recent call last):
+            ...
+        TypeError: b must be an integer
+
+        >>> add_integer({"a": 0}, [0])
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+
+        >>> add_integer(8.0, {"my"})
+        Traceback (most recent call last):
+            ...
+        TypeError: b must be an integer
