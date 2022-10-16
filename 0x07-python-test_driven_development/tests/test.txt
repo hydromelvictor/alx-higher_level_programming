@@ -43,7 +43,7 @@ guillaume@ubuntu:~/0x07$ ./0-main.py
 98
 b must be an integer
 a must be an integer
-guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/0-add_integer.txt | tail -2
+guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/0-add_integer.txt | tail -2 
 9 passed and 0 failed.
 Test passed.
 guillaume@ubuntu:~/0x07$ 
@@ -68,12 +68,16 @@ matrix doit être une liste de listes d'entiers ou de flottants,
 sinon déclenche une TypeError
 exception avec le message matrix doit être une matrice (liste de listes) 
 d'entiers/flottants
+
 Chaque ligne de la matrice doit être de la même taille, sinon déclencher une TypeError
 exception avec le message Chaque ligne de la matrice doit avoir la même taille
+
 div doit être un nombre (entier ou flottant), sinon déclenche une TypeError
 exception avec le message div doit être un nombre
+
 div ne peut pas être égal à 0, sinon lève une ZeroDivisionError
 exception avec la division du message par zéro
+
 Tous les éléments de la matrice doivent être divisés par div, arrondis à 2 décimales
 Renvoie une nouvelle matrice
 Vous n'êtes pas autorisé à importer un module
