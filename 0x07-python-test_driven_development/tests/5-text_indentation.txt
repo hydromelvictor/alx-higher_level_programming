@@ -1,0 +1,32 @@
+the ''5-text_indentation'' module
+==================================
+
+
+
+Using ''text_indentation''
+--------------------------
+
+
+        Importation
+            >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+        Module doc
+            >>> mod = __import__("5-text_indentation").__doc__
+            >>> len(mod) > 1
+            True
+
+        Function doc
+            >>> func = __import__("5-text_indentation").text_indentation.__doc__
+            >>> len(func) > 1
+            True
+
+        
+        tests
+        -----
+            >>> text_indentation("bonjour les degats")
+            bonjour les degats
+
+            >>> text_indentation(4)
+            Traceback (most recent call last):
+                ...
+            TypeError: text must be a string

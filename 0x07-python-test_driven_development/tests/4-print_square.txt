@@ -1,0 +1,45 @@
+the ''4-print_square'' module
+===============================
+
+
+
+Using ''print_square''
+----------------------
+
+
+        Importation
+            >>> print_square = __import__("4-print_square").print_square
+
+        Module doc
+            >>> mod = __import__("4-print_square").__doc__
+            >>> len(mod) > 1
+            True
+
+        Function doc
+            >>> func = __import__("4-print_square").print_square.__doc__
+            >>> len(func) > 1
+            True
+
+        
+        tests
+        ------
+            >>> print_square(4) #doctest: +NORMALIZE_WHITESPACE
+            ####
+            ####
+            ####
+            ####
+
+            >>> print_square(-1)
+            Traceback (most recent call last):
+                ...
+            TypeError: size must be >= 0
+
+            >>> print_square(3.7)
+            Traceback (most recent call last):
+                ...
+            TypeError: size must be an integer
+
+            >>> print_square("my")
+            Traceback (most recent call last):
+                ...
+            TypeError: size must be an integer
