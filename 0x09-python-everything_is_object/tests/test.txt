@@ -1,63 +1,4 @@
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-21. Tuple or not?
-mandatory
-a = (1, 2)
-Is a a tuple? Answer with Yes or No.
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 21-answer.txt
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-22. Tuple or not?
-mandatory
-a = (1)
-Is a a tuple? Answer with Yes or No.
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 22-answer.txt
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-23. Tuple or not?
-mandatory
-a = (1, )
-Is a a tuple? Answer with Yes or No.
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 23-answer.txt
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-24. Who I am?
-mandatory
-What does this script print?
-
-a = (1)
-b = (1)
-a is b
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 24-answer.txt
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-25. Tuple or not
-mandatory
-What does this script print?
-
-a = (1, 2)
-b = (1, 2)
-a is b
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 25-answer.txt
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 26. Empty is not empty
 mandatory
 What does this script print?
@@ -142,8 +83,12 @@ File: 100-magic_string.py
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 30. Low memory cost
 #advanced
+
+
+
 Write a class LockedClass with no class or object attribute, 
-that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called first_name.
+that prevents the user from dynamically creating new instance attributes, 
+except if the new instance attribute is called first_name.
 
 You are not allowed to import any module
 guillaume@ubuntu:~/0x09$ cat 101-main.py
