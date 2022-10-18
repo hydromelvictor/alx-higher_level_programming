@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+    class create
+"""
+
 
 class LockedClass:
     """
