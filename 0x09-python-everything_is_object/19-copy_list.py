@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def copy_list(l):
-    return [i for i in l if type(l) is list]
+def copy_list(m):
+    return [i for i in m if type(m) is list]
