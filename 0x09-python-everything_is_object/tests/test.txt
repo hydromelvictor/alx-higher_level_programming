@@ -1,22 +1,4 @@
-31. int 1/3
-#advanced
-julien@ubuntu:/python3$ cat int.py 
-a = 1
-b = 1
-julien@ubuntu:/python3$ 
-Assuming we are using a CPython implementation of Python3 with 
-default options/configuration:
-
-How many int objects are created by the execution of 
-the first line of the script? (103-line1.txt)
-How many int objects are created by the execution of 
-the second line of the script (103-line2.txt)
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 103-line1.txt, 103-line2.txt
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 32. int 2/3
 #advanced
 julien@ubuntu:/python3$ cat int.py 
@@ -25,7 +7,24 @@ b = 1024
 del a
 del b
 c = 1024
-julien@ubuntu:/python3$ 
+julien@ubuntu:/python3$
+En supposant que nous utilisons une implémentation CPython de Python3 avec
+options/configuration par défaut :
+
+Combien d'objets int sont créés par l'exécution de
+la première ligne du script? (104-line1.txt)
+Combien d'objets int sont créés par l'exécution de
+la deuxième ligne du script (104-line2.txt)
+Après l'exécution de la ligne 3, l'objet int pointé par a est-il supprimé ?
+Répondez par Oui ou Non (104-line3.txt)
+Après l'exécution de la ligne 4, l'objet int pointé par b est-il supprimé ?
+Répondez par Oui ou Non (104-line4.txt)
+Combien d'objets int sont créés par l'exécution de
+la dernière ligne du script (104-line5.txt)
+
+
+
+
 Assuming we are using a CPython implementation of Python3 with 
 default options/configuration:
 
