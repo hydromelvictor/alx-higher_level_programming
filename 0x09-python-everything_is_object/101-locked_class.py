@@ -5,4 +5,5 @@ class LockedClass:
         lockedclass
         __init__ function
     """
-    __slots__ = ['first_name']
+    def __init__(self):
+        self.__slots__ = ('first_name', )
