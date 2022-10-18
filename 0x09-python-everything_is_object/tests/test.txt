@@ -1,28 +1,3 @@
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-33. int 3/3
-#advanced
-julien@twix:/tmp/so$ cat int.py 
-print("I")
-print("Love")
-print("Python")
-julien@ubuntu:/tmp/so$ 
-Assuming we are using a CPython implementation of Python3 
-with default options/configuration:
-
-Before the execution of line 2 (print("Love")), 
-how many int objects have been created and are still in memory? (105-line1.txt)
-Why? (optional blog post :))
-Hint: NSMALLPOSINTS, NSMALLNEGINTS
-
-
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x09-python-everything_is_object
-File: 105-line1.txt
-  
-34. Clear strings
 #advanced
 guillaume@ubuntu:/python3$ cat string.py 
 a = "SCHL"
@@ -30,7 +5,24 @@ b = "SCHL"
 del a
 del b
 c = "SCHL"
-guillaume@ubuntu:/python3$ 
+guillaume@ubuntu:/python3$
+En supposant que nous utilisons une implémentation CPython de Python3
+avec les options/configuration par défaut (pour les réponses avec
+les nombres utilisent des nombres entiers, n'épelez pas le mot):
+
+Combien d'objets de chaîne sont créés par l'exécution de
+la première ligne du script? (106-line1.txt)
+Combien d'objets de chaîne sont créés par l'exécution de
+la deuxième ligne du script (106-line2.txt)
+Après l'exécution de la ligne 3, l'objet string pointé par un supprimé ?
+Répondez par Oui ou Non (106-line3.txt)
+Après l'exécution de la ligne 4, l'objet chaîne pointé par b est-il supprimé ?
+Répondez par Oui ou Non (106-line4.txt)
+Combien d'objets de chaîne sont créés par l'exécution de
+la dernière ligne du script (106-line5.txt)
+
+
+
 Assuming we are using a CPython implementation of Python3 
 with default options/configuration (For answers with 
 numbers use integers, don’t spell out the word):
