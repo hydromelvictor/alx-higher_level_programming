@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-    function print the arguments text with 
-    back new ligne if character is '.' or ':' or '?' 
+    function print the arguments text with
+    back new ligne if character is '.' or ':' or '?'
 """
 
 
