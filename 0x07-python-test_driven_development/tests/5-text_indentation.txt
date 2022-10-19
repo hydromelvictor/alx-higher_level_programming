@@ -33,5 +33,3 @@ Using ''text_indentation''
 
             >>> text_indentation(" ")
             <BLANKLINE>
-
-            >>>
