@@ -1,13 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
-
+    matrix function complete
 """
 
 
 def matrix_mul(m_a, m_b):
     """
-    
+        m_a: array of integer or float
     """
     if type(m_a) is not list or type(m_b) is not list:
         raise TypeError("m_a must be a list or m_b must be a list")
@@ -55,8 +55,4 @@ def matrix_mul(m_a, m_b):
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
-    m = []
-
-
-print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
-print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    
