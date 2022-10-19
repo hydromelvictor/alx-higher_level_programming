@@ -9,12 +9,18 @@ def matrix_mul(m_a, m_b):
     """
         m_a: array of integer or float
     """
-    
+
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
 
+    if len(m_a) == 0:
+        raise ValueError("m_a can't be empty")
+
     if type(m_b) is not list:
         raise TypeError("m_b must be a list")
+
+    if len(m_b) == 0:
+        raise ValueError("m_b can't be empty")
 
     for i in m_a:
         if type(i) is not list:
