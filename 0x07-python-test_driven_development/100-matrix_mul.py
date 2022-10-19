@@ -18,8 +18,7 @@ def matrix_mul(m_a, m_b):
     if len(m_a) == 0:
         raise ValueError("m_a can't be empty")
 
-    size1 = len(m_a[0])
-
+    size = None
     for i in m_a:
         if type(i) is not list:
             raise TypeError("m_a must be a list of lists")
@@ -27,8 +26,12 @@ def matrix_mul(m_a, m_b):
         if len(i) == 0:
             raise ValueError("m_a can't be empty")
 
+        if size is None:
+            size = len(i)
+            if size == 0:
+                raise ValueError("m_a can't be empty")
 
-        if len(i) != size1:
+        if len(i) != size:
             raise TypeError("each row of m_a must be of the same size")
         
         for j in i:
