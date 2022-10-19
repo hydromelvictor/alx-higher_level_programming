@@ -32,4 +32,4 @@ Using ''text_indentation''
             TypeError: text must be a string
 
             >>> text_indentation(" ")
-            <BLANKLINE>
+            
