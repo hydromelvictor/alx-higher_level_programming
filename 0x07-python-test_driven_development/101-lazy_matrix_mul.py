@@ -10,5 +10,7 @@ import numpy
 
 
 def lazy_matrix_mul(m_a, m_b):
-    """ calculates the matrix multiplication of two matrices"""
+    """ 
+        lazy matrix
+    """
     return numpy.matmul(m_a, m_b)

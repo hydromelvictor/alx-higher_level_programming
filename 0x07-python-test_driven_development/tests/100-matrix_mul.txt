@@ -83,7 +83,7 @@ Using ''matrix_mul''
             ...
         TypeError: each row of m_b must be of the same size
 
-        >>> matrix_mul([[2, 2], [2, 2]], [["1", 1], [1, 1]])
+        >>> matrix_mul([[2, 2], [2, 2]], [[1, 1], [1, ""]])
         Traceback (most recent call last):
             ...
-        TypeError: m_b should contain only integers or floats        
+        TypeError: m_b should contain only integers or floats
