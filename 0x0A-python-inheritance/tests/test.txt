@@ -1,46 +1,4 @@
-1. My list
-mandatory
-Écrivez une classe MyList qui hérite de list :
-
-Méthode d'instance publique : def print_sorted(self) : qui imprime la liste,
-mais trié (tri croissant)
-Vous pouvez supposer que tous les éléments de la liste seront de type int
-Vous n'êtes pas autorisé à importer un module
-
-
-Write a class MyList that inherits from list:
-
-Public instance method: def print_sorted(self): that prints the list, 
-but sorted (ascending sort)
-You can assume that all the elements of the list will be of type int
-You are not allowed to import any module
-
-guillaume@ubuntu:~/0x0A$ cat 1-main.py
-#!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
-
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
-
-guillaume@ubuntu:~/0x0A$ ./1-main.py
-[1, 4, 2, 3, 5]
-[1, 2, 3, 4, 5]
-[1, 4, 2, 3, 5]
-guillaume@ubuntu:~/0x0A$ 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0A-python-inheritance
-File: 1-my_list.py, tests/1-my_list.txt
-
-   
+  
 5. Geometry module
 mandatory
 Write an empty class BaseGeometry.
@@ -73,7 +31,9 @@ File: 5-base_geometry.py
 mandatory
 Write a class BaseGeometry (based on 5-base_geometry.py).
 
-Public instance method: def area(self): that raises an Exception with the message area() is not implemented
+Public instance method: 
+def area(self): that raises an Exception with the message area() 
+is not implemented
 You are not allowed to import any module
 guillaume@ubuntu:~/0x0A$ cat 6-main.py
 #!/usr/bin/python3
@@ -101,11 +61,17 @@ File: 6-base_geometry.py
 mandatory
 Write a class BaseGeometry (based on 6-base_geometry.py).
 
-Public instance method: def area(self): that raises an Exception with the message area() is not implemented
-Public instance method: def integer_validator(self, name, value): that validates value:
+Public instance method: 
+def area(self): that raises an Exception with the message area() is not implemented
+Public instance method: 
+def integer_validator(self, name, value): that validates value:
 you can assume name is always a string
-if value is not an integer: raise a TypeError exception, with the message <name> must be an integer
-if value is less or equal to 0: raise a ValueError exception with the message <name> must be greater than 0
+
+if value is not an integer: raise a TypeError exception, 
+with the message <name> must be an integer
+if value is less or equal to 0: raise a ValueError exception with 
+the message <name> must be greater than 0
+
 You are not allowed to import any module
 guillaume@ubuntu:~/0x0A$ cat 7-main.py
 #!/usr/bin/python3
