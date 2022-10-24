@@ -8,7 +8,7 @@ def add_attribute(obj, attr, value):
         attr: attribute
         value: attribute value
     """
-    if attr in obj.__dict__:
+    if attr in obj.__dict__ or attr in obj.__dir__:
         raise TypeError("can't add new attribute")
 
     obj.attr = value
