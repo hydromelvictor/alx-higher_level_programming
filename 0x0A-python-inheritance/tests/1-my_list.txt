@@ -20,8 +20,8 @@ Using ''MyList''
                 True
 
             Function doc
-                >>> l = __import__("1-my_list").MyList.__init__.print_sorted.__doc__
-                >>> len(l) > 1
+                >>> v = __import__("1-my_list").MyList.print_sorted.__doc__
+                >>> len(v) > 1
                 True
 
 
@@ -36,7 +36,9 @@ Using ''MyList''
                 [4]
 
                 >>> MyList.print_sorted()
-                []
+                Traceback (most recent call last):
+                    ...
+                TypeError: print_sorted() missing 1 required positional argument: 'self'
 
                 >>> p.append(7)
                 >>> p.append(-1)
