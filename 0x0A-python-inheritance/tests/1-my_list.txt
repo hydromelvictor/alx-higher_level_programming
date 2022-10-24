@@ -1,0 +1,43 @@
+my ''1-my_list'' module
+========================
+
+
+
+Using ''MyList''
+-----------------
+
+        >>> MyList = __import__("1-my_list").MyList
+
+        >>> m = __import__("1-my_list").__doc__
+        >>> len(m) > 1
+        True
+
+        >>> n = __import__("1-my_list").MyList.__doc__
+        >>> len(n) > 1
+        True
+
+        >>> s = __import__("1-my_list").MyList.__init__.__doc__
+        >>> len(s) > 1
+        True
+        
+        >>> l = __import__("1-my_list").MyList.__init__.print_sorted.__doc__
+        >>> len(l) > 1
+        True
+
+        test
+        ----
+
+        >>> p = MyList()
+        >>> p.append(4)
+        >>> print(p)
+        [4]
+
+        >>> issubclass(type(MyList), list)
+        True
+
+        >>> MyList.print_sorted()
+
+        >>> MyList.print_sorted(4)
+        Traceback (most recent call last):
+            ...
+        TypeError: 'int' object is not iterable
