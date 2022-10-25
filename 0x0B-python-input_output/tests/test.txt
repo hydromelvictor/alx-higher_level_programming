@@ -1,51 +1,19 @@
-7. Load, add, save
-mandatory
-Ecrire un script qui ajoute tous les arguments à une liste Python,
-puis enregistrez-les dans un fichier :
-
-Vous devez utiliser votre fonction save_to_json_file de 5-save_to_json_file.py
-Vous devez utiliser votre fonction load_from_json_file de 6-load_from_json_file.py
-La liste doit être enregistrée en tant que représentation 
-JSON dans un fichier nommé add_item.json
-Si le fichier n'existe pas, il doit être créé
-Vous n'avez pas besoin de gérer les autorisations/exceptions des fichiers.
-
-
-Write a script that adds all arguments to a Python list, 
-and then save them to a file:
-
-You must use your function save_to_json_file from 5-save_to_json_file.py
-You must use your function load_from_json_file from 6-load_from_json_file.py
-The list must be saved as a JSON representation in a file named add_item.json
-If the file doesn’t exist, it should be created
-You don’t need to manage file permissions / exceptions.
-guillaume@ubuntu:~/0x0B$ cat add_item.json
-cat: add_item.json: No such file or directory
-guillaume@ubuntu:~/0x0B$ ./7-add_item.py
-guillaume@ubuntu:~/0x0B$ cat add_item.json ; echo ""
-[]
-guillaume@ubuntu:~/0x0B$ ./7-add_item.py Best School
-guillaume@ubuntu:~/0x0B$ cat add_item.json ; echo ""
-["Best", "School"]
-guillaume@ubuntu:~/0x0B$ ./7-add_item.py 89 Python C
-guillaume@ubuntu:~/0x0B$ cat add_item.json ; echo ""
-["Best", "School", "89", "Python", "C"]
-guillaume@ubuntu:~/0x0B$ 
-No test cases needed
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 7-add_item.py
-   
 8. Class to JSON
 mandatory
+Écrire une fonction qui renvoie la description du dictionnaire
+avec une structure de données simple (liste, dictionnaire, chaîne, entier et booléen)
+pour la sérialisation JSON d'un objet :
+
 Write a function that returns the dictionary description 
 with simple data structure (list, dictionary, string, integer and boolean) 
 for JSON serialization of an object:
 
 Prototype: def class_to_json(obj):
+obj est une instance d'une classe
+Tous les attributs de la classe obj sont sérialisables : liste, dictionnaire, chaîne,
+entier et booléen
+Vous n'êtes pas autorisé à importer un module
+
 obj is an instance of a Class
 All attributes of the obj Class are serializable: list, dictionary, string, 
 integer and boolean
