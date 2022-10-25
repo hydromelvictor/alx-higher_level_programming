@@ -1,54 +1,3 @@
-10. Student to JSON with filter
-mandatory
-Write a class Student that defines a student by: (based on 9-student.py)
-
-Public instance attributes:
-first_name
-last_name
-age
-Instantiation with first_name, last_name and age: 
-def __init__(self, first_name, last_name, age):
-
-Public method def to_json(self, attrs=None): that retrieves a dictionary 
-representation of a Student instance (same as 8-class_to_json.py):
-If attrs is a list of strings, only attribute names contained 
-in this list must be retrieved.
-
-qui récupère un dictionnaire
-représentation d'une instance Student (identique à 8-class_to_json.py) :
-Si attrs est une liste de chaînes, seuls les noms d'attribut contenus
-dans cette liste doivent être récupérés.
-
-Otherwise, all attributes must be retrieved
-You are not allowed to import any module
-guillaume@ubuntu:~/0x0B$ cat 10-main.py 
-#!/usr/bin/python3
-Student = __import__('10-student').Student
-
-student_1 = Student("John", "Doe", 23)
-student_2 = Student("Bob", "Dylan", 27)
-
-j_student_1 = student_1.to_json()
-j_student_2 = student_2.to_json(['first_name', 'age'])
-j_student_3 = student_2.to_json(['middle_name', 'age'])
-
-print(j_student_1)
-print(j_student_2)
-print(j_student_3)
-
-guillaume@ubuntu:~/0x0B$ ./10-main.py 
-{'age': 23, 'last_name': 'Doe', 'first_name': 'John'}
-{'age': 27, 'first_name': 'Bob'}
-{'age': 27}
-guillaume@ubuntu:~/0x0B$
-No test cases needed
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 10-student.py
-   
 11. Student to disk and reload
 mandatory
 Write a class Student that defines a student by: (based on 10-student.py)
@@ -64,7 +13,21 @@ representation of a Student instance (same as 8-class_to_json.py):
 If attrs is a list of strings, only attributes name contain 
 in this list must be retrieved.
 Otherwise, all attributes must be retrieved
-Public method def reload_from_json(self, json): 
+
+Public method def reload_from_json(self, json):
+
+qui remplace tous les attributs de l'instance Student :
+Vous pouvez supposer que json sera toujours un dictionnaire
+Une clé de dictionnaire sera le nom d'attribut public
+Une valeur de dictionnaire sera la valeur de l'attribut public
+Vous n'êtes pas autorisé à importer un module
+Maintenant, vous avez une implémentation simple d'une sérialisation 
+et d'une désérialisation
+mécanisme (notion de représentation d'un objet dans un autre format,
+sans perdre aucune information et nous permettent de reconstruire un objet basé sur
+cette représentation)
+
+
 that replaces all attributes of the Student instance:
 You can assume json will always be a dictionary
 A dictionary key will be the public attribute name
