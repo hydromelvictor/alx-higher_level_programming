@@ -1,128 +1,15 @@
-4. From JSON string to Object
-mandatory
-Écrire une fonction qui renvoie un objet (structure de données Python)
-représenté par une chaîne JSON :
-
-Write a function that returns an object (Python data structure) 
-represented by a JSON string:
-
-Prototype: def from_json_string(my_str):
-Vous n'avez pas besoin de gérer les exceptions
-si la chaîne JSON ne représente pas un objet.
-
-You don’t need to manage exceptions 
-if the JSON string doesn’t represent an object.
-guillaume@ubuntu:~/0x0B$ cat 4-main.py
-#!/usr/bin/python3
-from_json_string = __import__('4-from_json_string').from_json_string
-
-s_my_list = "[1, 2, 3]"
-my_list = from_json_string(s_my_list)
-print(my_list)
-print(type(my_list))
-
-s_my_dict = """
-{"is_active": true, "info": {"age": 36, "average": 3.14}, 
-"id": 12, "name": "John", "places": ["San Francisco", "Tokyo"]}
-"""
-my_dict = from_json_string(s_my_dict)
-print(my_dict)
-print(type(my_dict))
-
-try:
-    s_my_dict = """
-    {"is_active": true, 12 }
-    """
-    my_dict = from_json_string(s_my_dict)
-    print(my_dict)
-    print(type(my_dict))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0B$ ./4-main.py
-[1, 2, 3]
-<class 'list'>
-{'id': 12, 'is_active': True, 'name': 'John', 'info': {'age': 36, 'average': 3.14}, 
-'places': ['San Francisco', 'Tokyo']}
-<class 'dict'>
-[ValueError] Expecting property name enclosed in double quotes: 
-line 2 column 25 (char 25)
-guillaume@ubuntu:~/0x0B$ 
-No test cases needed
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 4-from_json_string.py
-   
-5. Save Object to a file
-mandatory
-Écrivez une fonction qui écrit un objet dans un fichier texte,
-en utilisant une représentation JSON :
-
-Write a function that writes an Object to a text file, 
-using a JSON representation:
-
-Prototype: 
-Vous devez utiliser l'instruction with
-Vous n'avez pas besoin de gérer les exceptions si l'objet ne peut pas être sérialisé.
-Vous n'avez pas besoin de gérer les exceptions d'autorisation de fichier.
-
-You must use the with statement
-You don’t need to manage exceptions if the object can’t be serialized.
-You don’t need to manage file permission exceptions.
-guillaume@ubuntu:~/0x0B$ cat 5-main.py
-#!/usr/bin/python3
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-
-filename = "my_list.json"
-my_list = [1, 2, 3]
-save_to_json_file(my_list, filename)
-
-filename = "my_dict.json"
-my_dict = { 
-    'id': 12,
-    'name': "John",
-    'places': [ "San Francisco", "Tokyo" ],
-    'is_active': True,
-    'info': {
-        'age': 36,
-        'average': 3.14
-    }
-}
-save_to_json_file(my_dict, filename)
-
-try:
-    filename = "my_set.json"
-    my_set = { 132, 3 }
-    save_to_json_file(my_set, filename)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0B$ ./5-main.py
-[TypeError] {3, 132} is not JSON serializable
-guillaume@ubuntu:~/0x0B$ cat my_list.json ; echo ""
-[1, 2, 3]
-guillaume@ubuntu:~/0x0B$ cat my_dict.json ; echo ""
-{"name": "John", "places": ["San Francisco", "Tokyo"], "id": 12, 
-"info": {"average": 3.14, "age": 36}, "is_active": true}
-guillaume@ubuntu:~/0x0B$ cat my_set.json ; echo ""
-
-guillaume@ubuntu:~/0x0B$ 
-No test cases needed
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 5-save_to_json_file.py
-   
 6. Create object from a JSON file
 mandatory
+Écrivez une fonction qui crée un objet à partir d'un "fichier JSON":
+
 Write a function that creates an Object from a “JSON file”:
 
 Prototype: def load_from_json_file(filename):
+Vous devez utiliser l'instruction with
+Vous n'avez pas besoin de gérer les exceptions 
+si la chaîne JSON ne représente pas un objet.
+Vous n'avez pas besoin de gérer les autorisations/exceptions des fichiers.
+
 You must use the with statement
 You don’t need to manage exceptions if the JSON string doesn’t represent an object.
 You don’t need to manage file permissions / exceptions.
@@ -185,6 +72,17 @@ File: 6-load_from_json_file.py
    
 7. Load, add, save
 mandatory
+Ecrire un script qui ajoute tous les arguments à une liste Python,
+puis enregistrez-les dans un fichier :
+
+Vous devez utiliser votre fonction save_to_json_file de 5-save_to_json_file.py
+Vous devez utiliser votre fonction load_from_json_file de 6-load_from_json_file.py
+La liste doit être enregistrée en tant que représentation 
+JSON dans un fichier nommé add_item.json
+Si le fichier n'existe pas, il doit être créé
+Vous n'avez pas besoin de gérer les autorisations/exceptions des fichiers.
+
+
 Write a script that adds all arguments to a Python list, 
 and then save them to a file:
 
