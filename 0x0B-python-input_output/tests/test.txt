@@ -64,7 +64,7 @@ en utilisant une représentation JSON :
 Write a function that writes an Object to a text file, 
 using a JSON representation:
 
-Prototype: def save_to_json_file(my_obj, filename):
+Prototype: 
 Vous devez utiliser l'instruction with
 Vous n'avez pas besoin de gérer les exceptions si l'objet ne peut pas être sérialisé.
 Vous n'avez pas besoin de gérer les exceptions d'autorisation de fichier.
