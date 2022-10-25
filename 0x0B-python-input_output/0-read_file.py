@@ -7,5 +7,6 @@ def read_file(filename=""):
     """filename: name of file
         print file contains in the stdout
     """
-    with open(filename, 'r') as file:
-        file.read()
+    with open(filename, 'r', encoding='UTF-8') as file:
+        for line in file:
+            print(line)
