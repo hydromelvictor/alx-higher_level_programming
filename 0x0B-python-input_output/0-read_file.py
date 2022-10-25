@@ -8,4 +8,4 @@ def read_file(filename=""):
         print file contains in the stdout
     """
     with open(filename, 'r', encoding='utf-8') as file:
-        file.read()
+        print(file.read(), end="")
