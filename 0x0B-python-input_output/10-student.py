@@ -18,10 +18,10 @@ class Student:
     def to_json(self, attrs=None):
         """ to json
         """
-        dict = []
+        dict = {}
         if attrs is None:
             return self.__dict__
         else:
             for a in attrs:
-                dict.append(self.__dict__[a])
+                dict[a] = self.__dict__[a]
             return dict
