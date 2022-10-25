@@ -23,5 +23,8 @@ class Student:
             return self.__dict__
         else:
             for a in attrs:
-                dict[a] = self.__dict__[a]
+                try:
+                    dict[a] = self.__dict__[a]
+                except Exception:
+                    pass
             return dict
