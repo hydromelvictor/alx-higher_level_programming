@@ -1,114 +1,17 @@
-2. Append to a file
-mandatory
-Écrire une fonction qui ajoute une chaîne à la fin d'un fichier texte
-(UTF8) et renvoie le nombre de caractères ajoutés :
-
-Write a function that appends a string at the end of a text file 
-(UTF8) and returns the number of characters added:
-
-Prototype: def append_write(filename="", text=""):
-Si le fichier n'existe pas, il doit être créé
-Vous devez utiliser l'instruction with
-Vous n'avez pas besoin de gérer les autorisations de fichier 
-ou le fichier n'existe pas d'exceptions.
-Vous n'êtes pas autorisé à importer un module
-
-
-If the file doesn’t exist, it should be created
-You must use the with statement
-You don’t need to manage file permission or file doesn't exist exceptions.
-You are not allowed to import any module
-guillaume@ubuntu:~/0x0B$ cat 2-main.py
-#!/usr/bin/python3
-append_write = __import__('2-append_write').append_write
-
-nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
-print(nb_characters_added)
-
-guillaume@ubuntu:~/0x0B$ cat file_append.txt
-cat: file_append.txt: No such file or directory
-guillaume@ubuntu:~/0x0B$ ./2-main.py
-29
-guillaume@ubuntu:~/0x0B$ cat file_append.txt
-This School is so cool!
-guillaume@ubuntu:~/0x0B$ ./2-main.py
-29
-guillaume@ubuntu:~/0x0B$ cat file_append.txt
-This School is so cool!
-This School is so cool!
-guillaume@ubuntu:~/0x0B$ 
-No test cases needed
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 2-append_write.py
-   
-3. To JSON string
-mandatory
-Écrivez une fonction qui renvoie la représentation JSON d'un objet (chaîne) :
-
-Write a function that returns the JSON representation of an object (string):
-
-Prototype: def to_json_string(my_obj):
-Vous n'avez pas besoin de gérer les exceptions si l'objet ne peut pas être sérialisé
-
-You don’t need to manage exceptions if the object can’t be serialized.
-guillaume@ubuntu:~/0x0B$ cat 3-main.py
-#!/usr/bin/python3
-to_json_string = __import__('3-to_json_string').to_json_string
-
-my_list = [1, 2, 3]
-s_my_list = to_json_string(my_list)
-print(s_my_list)
-print(type(s_my_list))
-
-my_dict = { 
-    'id': 12,
-    'name': "John",
-    'places': [ "San Francisco", "Tokyo" ],
-    'is_active': True,
-    'info': {
-        'age': 36,
-        'average': 3.14
-    }
-}
-s_my_dict = to_json_string(my_dict)
-print(s_my_dict)
-print(type(s_my_dict))
-
-try:
-    my_set = { 132, 3 }
-    s_my_set = to_json_string(my_set)
-    print(s_my_set)
-    print(type(s_my_set))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0B$ ./3-main.py
-[1, 2, 3]
-<class 'str'>
-{"id": 12, "is_active": true, "name": "John", "info": {"average": 3.14, "age": 36}, 
-"places": ["San Francisco", "Tokyo"]}
-<class 'str'>
-[TypeError] {3, 132} is not JSON serializable
-guillaume@ubuntu:~/0x0B$ 
-No test cases needed
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 3-to_json_string.py
-   
 4. From JSON string to Object
 mandatory
+Écrire une fonction qui renvoie un objet (structure de données Python)
+représenté par une chaîne JSON :
+
 Write a function that returns an object (Python data structure) 
 represented by a JSON string:
 
 Prototype: def from_json_string(my_str):
-You don’t need to manage exceptions if the JSON string doesn’t represent an object.
+Vous n'avez pas besoin de gérer les exceptions
+si la chaîne JSON ne représente pas un objet.
+
+You don’t need to manage exceptions 
+if the JSON string doesn’t represent an object.
 guillaume@ubuntu:~/0x0B$ cat 4-main.py
 #!/usr/bin/python3
 from_json_string = __import__('4-from_json_string').from_json_string
@@ -155,9 +58,17 @@ File: 4-from_json_string.py
    
 5. Save Object to a file
 mandatory
-Write a function that writes an Object to a text file, using a JSON representation:
+Écrivez une fonction qui écrit un objet dans un fichier texte,
+en utilisant une représentation JSON :
+
+Write a function that writes an Object to a text file, 
+using a JSON representation:
 
 Prototype: def save_to_json_file(my_obj, filename):
+Vous devez utiliser l'instruction with
+Vous n'avez pas besoin de gérer les exceptions si l'objet ne peut pas être sérialisé.
+Vous n'avez pas besoin de gérer les exceptions d'autorisation de fichier.
+
 You must use the with statement
 You don’t need to manage exceptions if the object can’t be serialized.
 You don’t need to manage file permission exceptions.
