@@ -18,7 +18,10 @@ class Student:
     def to_json(self, attrs=None):
         """ to json
         """
-        if type(attrs) is list and type(attrs[0]) is str:
-            return attrs.__dict__
-
-        return self.__dict__
+        dict = []
+        if attrs is None:
+            return self.__dict__
+        else:
+            for a in attrs:
+                dict.append(self.__dict__[a])
+            return dict
