@@ -8,7 +8,18 @@ def append_after(filename="", search_string="", new_string=""):
         search_string: string
         new_string: string  new
     """
-    with open(filename, "r+", encoding="utf-8") as file:
-        for line in file:
+    lineof = []
+    with open(filename, "r", encoding="utf-8") as file:
+
+        while True:
+            line = file.readline()
+
+            if line == "":
+                break
+
+            lineof.append(line)
             if line == search_string:
-                file.write(new_string)
+                lineof.append(new_string)
+
+    with open(filename, "w", encoding="utf-8") as file:
+        file.writelines(lineof)
