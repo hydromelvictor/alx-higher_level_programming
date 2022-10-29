@@ -927,7 +927,7 @@ Repo:
 GitHub repository: alx-higher_level_programming
 Directory: 0x0C-python-almost_a_circle
 File: models/base.py
- 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 16. JSON string to file
 mandatory
 Mettre à jour la classe Base en ajoutant la méthode de classe
@@ -969,7 +969,7 @@ if __name__ == "__main__":
 guillaume@ubuntu:~/$ ./15-main.py
 [{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, 
 {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]
-guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$
 Repo:
 
 GitHub repository: alx-higher_level_programming
