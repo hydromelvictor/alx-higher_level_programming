@@ -3,7 +3,7 @@
 """
 
 import json
-
+import os
 
 class Base:
     """base class
@@ -33,12 +33,10 @@ class Base:
         """save to file json
         """
         filename = cls.__name__ + ".json"
-        
-        if list_objs is None:
-            list_objs = []
+        obj = cls.to_json_string(list_objs)
 
         with open(filename, "w", encoding="utf-8") as file:
-            file.write(cls.to_json_string(list_objs))
+            file.write(obj)
 
     @staticmethod
     def from_json_string(json_string):
@@ -53,6 +51,35 @@ class Base:
     def create(cls, **dictionary):
         """creating functions
         """
-        pass
+        str = f"[{cls.__name__}]"
+        if "id" in dictionary:
+            str += f" ({dictionary['id']})"
+
+        if "x" in dictionary:
+            str += f" {dictionary['x']}/"
+
+        if "y" in dictionary:
+            str += f"{dictionary['y']} -"
+
+        if "width" in dictionary:
+            str += f" {dictionary['width']}/"
+
+        if "height" in dictionary:
+            str += f"{dictionary['height']}"
+
+        return str
+
+    @classmethod
+    def load_from_file(cls):
+        """loads form file"""
+        filename = cls.__name__ + ".json"
+
+        if os.path.exists(filename) == True:
+            with open(filename, "r", encoding="utf-8") as file:
+                for i in file:
+                    cls.from_json_string(i)
+        else:
+            return []
+
 
 

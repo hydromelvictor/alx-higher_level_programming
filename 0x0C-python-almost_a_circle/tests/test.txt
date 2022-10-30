@@ -1031,7 +1031,8 @@ Mettre à jour la classe Base en ajoutant la méthode de classe
 def create(cls, **dictionary): qui renvoie une instance avec
 tous les attributs déjà définis :
 
-**le dictionnaire peut être considéré comme un double pointeur vers un dictionnaire
+**le dictionnaire peut être considéré comme un double pointeur vers un 
+dictionnaire
 Pour utiliser la méthode de mise à jour pour affecter tous les attributs,
 vous devez créer une instance "factice" avant :
 Créer une instance Rectangle ou Square avec "dummy"
