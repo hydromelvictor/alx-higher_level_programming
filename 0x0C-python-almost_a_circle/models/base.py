@@ -25,7 +25,7 @@ class Base:
         """convert to json
         """
         if list_dictionaries is None or len(list_dictionaries) < 1:
-            return json.dumps([])
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
 
