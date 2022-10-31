@@ -4,11 +4,10 @@
 
 
 import base
-Base = base.Base
 
 
 
-class Rectangle(Base):
+class Rectangle(base.Base):
     """class inheritance of Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
