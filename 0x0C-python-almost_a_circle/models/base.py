@@ -5,6 +5,7 @@
 import json
 import os
 
+
 class Base:
     """base class
     """
@@ -40,7 +41,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """deserialization of json_string 
+        """deserialization of json_string
         """
         if json_string is None or len(json_string) == 0:
             return []
@@ -74,12 +75,9 @@ class Base:
         """loads form file"""
         filename = cls.__name__ + ".json"
 
-        if os.path.exists(filename) == True:
+        if os.path.exists(filename):
             with open(filename, "r", encoding="utf-8") as file:
                 for i in file:
                     cls.from_json_string(i)
         else:
             return []
-
-
-
