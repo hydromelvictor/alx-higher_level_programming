@@ -5,10 +5,9 @@
 from base import Base
 
 
-
 class Rectangle(Base):
     """class inheritance of Base"""
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ width: rectangle width
             height: rectangle height
@@ -132,7 +131,7 @@ class Rectangle(Base):
         for i in range(self.__height):
             for k in range(self.__x):
                 print(" ", end="")
-                
+
             for j in range(self.__width):
                 print("#", end="")
             print()
@@ -140,8 +139,9 @@ class Rectangle(Base):
     def __str__(self):
         """string format methode
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, 
-            self.__y, self.__width, self.__height)
+        return "\
+        [Rectangle] ({}) {}/{} - {}/{}\
+        ".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """ updating
@@ -158,7 +158,7 @@ class Rectangle(Base):
                     if args[i] <= 0:
                         raise ValueError("width must be > 0")
                     self.__width = args[i]
-            
+
                 if i == 2:
                     if type(args[i]) is not int:
                         raise TypeError("height must be an integer")
@@ -189,7 +189,7 @@ class Rectangle(Base):
             for key in kwargs:
                 if key == "id":
                     self.id = kwargs[key]
-                
+
                 if key == "width":
                     if type(kwargs[key]) is not int:
                         raise TypeError("width must be an integer")
@@ -226,4 +226,4 @@ class Rectangle(Base):
         """dictionary
         """
         return {"id": self.id, "width": self.__width,
-            "height": self.__height, "x": self.__x, "y": self.__y}
+                "height": self.__height, "x": self.__x, "y": self.__y}
