@@ -3,7 +3,6 @@
 squared class
 """
 
-
 import json
 import os
 
@@ -308,7 +307,6 @@ class Rectangle(Base):
                 "height": self.__height, "x": self.__x, "y": self.__y}
 
 
-
 class Square(Rectangle):
     """inheritance of rectangle
     """
@@ -320,19 +318,19 @@ class Square(Rectangle):
         id: identifier
         """
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
         """string format
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-            self.y, self.width)
+        return "[Square] ({}) {}/{} - {}"\
+            .format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
         """size getters
         """
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """setter for size"""
@@ -363,7 +361,7 @@ class Square(Rectangle):
             for key in kwargs:
                 if key == "id":
                     self.id = kwargs[key]
-                
+
                 if key == "size":
                     self.width = kwargs[key]
                     self.height = kwargs[key]
