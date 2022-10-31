@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """create the rectanlge"""
 
-from base import Base
+Base = __import__("base").Base
 
 
 class Rectanlge(Base):
