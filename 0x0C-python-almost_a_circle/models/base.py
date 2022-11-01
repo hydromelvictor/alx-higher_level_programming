@@ -34,11 +34,9 @@ class Base:
         """save to file json
         """
         filename = cls.__name__ + ".json"
-        obj = cls.to_json_string(list_objs)
-        if os.path.exists(filename):
-            os.remove(filename)
+    
         with open(filename, "w", encoding="utf-8") as file:
-            file.write(obj)
+            json.dump(cls.to_json_string(list_objs), file)
 
     @staticmethod
     def from_json_string(json_string):
