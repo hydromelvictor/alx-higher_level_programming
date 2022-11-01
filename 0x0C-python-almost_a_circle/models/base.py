@@ -34,9 +34,10 @@ class Base:
         """save to file json
         """
         filename = cls.__name__ + ".json"
-    
+        obj = cls.to_json_string(list_objs)
+
         with open(filename, "w", encoding="utf-8") as file:
-            json.dump(cls.to_json_string(list_objs), file)
+            file.write(obj)
 
     @staticmethod
     def from_json_string(json_string):
