@@ -52,23 +52,7 @@ class Base:
     def create(cls, **dictionary):
         """creating functions
         """
-        str = f"[{cls.__name__}]"
-        if "id" in dictionary:
-            str += f" ({dictionary['id']})"
-
-        if "x" in dictionary:
-            str += f" {dictionary['x']}/"
-
-        if "y" in dictionary:
-            str += f"{dictionary['y']} -"
-
-        if "width" in dictionary:
-            str += f" {dictionary['width']}/"
-
-        if "height" in dictionary:
-            str += f"{dictionary['height']}"
-
-        return str
+        return cls(dictionary[i] for i in dictionary )
 
     @classmethod
     def load_from_file(cls):
