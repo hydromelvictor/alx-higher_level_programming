@@ -68,34 +68,40 @@ class TestBase(unittest.TestCase):
 
     def test_to_json1(self):
         self.assertEqual(Base(2).to_json_string([{'name': 'victor', 'age': 14}]),
-            "[{'name': 'victor', 'age': 14}]")
+            '[{"name": "victor", "age": 14}]')
 
     def test_to_json2(self):
-        self.assertEqual(Base().to_json_string([], '[]'))
+        self.assertEqual(Base().to_json_string([]), '[]')
 
     def test_save1(self):
         r1 = {'id': 10, 'code': 7}
         r2 = {'name': 'victor', 'prof': 'garden', 'code': 14}
         Base(1).save_to_file([r1, r2])
         file = "Base.json"
+        liste = []
         self.assertTrue(os.path.exists(file))
         with open(file, "r", encoding="utf-8") as f:
-            self.assertTrue(len(f) > 1)
+            for i in f:
+                liste.append(f.readline())
+        self.assertTrue(len(liste) > 1)
 
     def test_save2(self):
         Base().save_to_file([])
         file = "Base.json"
+        liste = []
         self.assertTrue(os.path.exists(file))
         with open(file, "r", encoding="utf-8") as f:
-            self.assertTrue(len(f) == 0)
+            for i in f:
+                liste.append(f.readline())
+        self.assertTrue(len(liste) == 0)
 
     def test_from1(self):
         s = json.dumps([1, 0, 5, 2])
-        self.assertEqual(Base.from_json_string(s), '[1, 0, 5, 2]')
+        self.assertEqual(Base.from_json_string(s), [1, 0, 5, 2])
 
     def test_from2(self):
         s = Base().to_json_string([])
-        self.assertTrue(Base.from_json_string(s), '[]')
+        self.assertEqual(Base.from_json_string(s), [])
 
 
 class TestBaseFail(unittest.TestCase):

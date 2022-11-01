@@ -35,7 +35,8 @@ class Base:
         """
         filename = cls.__name__ + ".json"
         obj = cls.to_json_string(list_objs)
-
+        if os.path.exists(filename):
+            os.remove(filename)
         with open(filename, "w", encoding="utf-8") as file:
             file.write(obj)
 
