@@ -58,7 +58,7 @@ class Base:
         """loads form file"""
         filename = cls.__name__ + ".json"
 
-        if os.path.exists(filename):
+        if os.path.isfile(filename):
             with open(filename, "r", encoding="utf-8") as file:
                 for i in file:
                     cls.from_json_string(i)
