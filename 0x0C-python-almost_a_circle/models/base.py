@@ -60,7 +60,6 @@ class Base:
 
         if os.path.isfile(filename):
             with open(filename, "r", encoding="utf-8") as file:
-                for i in file:
-                    cls.from_json_string(i)
+                cls.from_json_string(file.read())
         else:
             return []
