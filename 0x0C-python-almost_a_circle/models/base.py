@@ -51,7 +51,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """creating functions"""
-        return cls(4, 2, 1).update(**dictionary)
+        return cls(4, 2, 1).update(dictionary)
 
     @classmethod
     def load_from_file(cls):
