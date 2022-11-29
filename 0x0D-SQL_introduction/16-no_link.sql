@@ -2,4 +2,4 @@
 SELECT `score`, `name`
 FROM `second_table`
 WHERE `name` != ""
-ORDER BY `sorce` DESC;
+ORDER BY `score` DESC;
