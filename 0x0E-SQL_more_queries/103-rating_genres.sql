@@ -1,5 +1,5 @@
 -- lists all genres in the database hbtn_0d_tvshows_rate
-SELECT tvg.`name`, SUM(`rate`) AS `rating`
+SELECT tvg.`name`, SUM(tvg.`rate`) AS `rating`
 FROM `tv_genres` AS tvg
     INNER JOIN `tv_show_genres` AS tvs
     ON tvs.`genre_id` = tvg.`id`
