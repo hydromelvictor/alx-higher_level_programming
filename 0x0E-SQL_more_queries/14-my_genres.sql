@@ -7,4 +7,4 @@ FROM `tv_genres` AS tvg
     INNER JOIN `tv_shows` AS tv
     ON tv.`id` = tvs.`show_id`
     WHERE tv.`title` = "Dexter"
-ORDER BY tvg.`name` ASC;
+ORDER BY tvg.`name`;
