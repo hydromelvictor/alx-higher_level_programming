@@ -1,10 +1,10 @@
 -- uses the hbtn_0d_tvshows database to lists all genres of the show Dexter
-SELECT tvg.`name`
-FROM `tv_genres` AS tvg 
-    INNER JOIN `tv_show_genre` AS tvs
-    ON tvg.`id` = tvs.`genre_id`
+SELECT `tv_genres`.`name`
+FROM `tv_genres`
+    INNER JOIN `tv_show_genres`
+    ON `tv_show_genres`.`id` = `tv_show_genres`.`genre_id`
 
-    INNER JOIN `tv_shows` AS tv
-    ON tv.`id` = tvs.`show_id`
-    WHERE tv.`title` = "Dexter"
-ORDER BY tvg.`name`;
+    INNER JOIN `tv_shows`
+    ON `tv_shows`.`id` = `tv_show_genres`.`show_id`
+    WHERE `tv_shows`.`title` = "Dexter"
+ORDER BY `tv_show_genres`.`name`;
