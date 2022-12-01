@@ -5,7 +5,7 @@ FROM `tv_shows` AS tv
     ON tv.`id` = tvs.`show_id`
 
     INNER JOIN `tv_genres` AS tvg
-    ON tv.`id` = tvs.`genre_id`
+    ON tvg.`id` = tvs.`genre_id`
     WHERE tv.`title` NOT IN (
         SELECT tv.`title`
         FROM `tv_shows` AS tv
@@ -13,7 +13,7 @@ FROM `tv_shows` AS tv
             ON tv.`id` = tvs.`show_id`
 
             INNER JOIN `tv_genres` AS tvg
-            ON tv.`id` = tvs.`genre_id`
+            ON tvg.`id` = tvs.`genre_id`
             WHERE tv.`title` = "Comedy";
     )
 ORDER BY tv.`title` ASC;
