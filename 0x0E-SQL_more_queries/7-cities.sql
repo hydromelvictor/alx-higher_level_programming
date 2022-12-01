@@ -1,5 +1,5 @@
 -- creates the database  and the table 
-CREATE DATABASE 
+CREATE DATABASE
     IF NOT EXISTS `hbtn_0d_usa`;
 CREATE TABLE
     IF NOT EXISTS `hbtn_0d_usa`.`cities` (
