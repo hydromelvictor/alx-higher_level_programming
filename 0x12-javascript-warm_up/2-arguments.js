@@ -1,9 +1,7 @@
 #!/usr/bin/node
-import { argv } from 'node:precess';
-
-if (!argv)
+if (process.argv.length === 2)
 {
     console.log('No argument');
 }else{
-    console.log((argv[1]) ? 'Arguments found' : 'Argument found');
+    console.log((process.argv.length > 3) ? 'Arguments found' : 'Argument found');
 }

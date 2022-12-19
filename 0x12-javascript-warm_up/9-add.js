@@ -1,12 +1,11 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
 function add(a, b)
 {
     return (a + b);
 }
 
-let a = Math.floor(Number(argv[1]));
-let b = Math.floor(Number(argv[2]));
+let a = Math.floor(Number(process.argv[2]));
+let b = Math.floor(Number(process.argv[3]));
 
 if (a && b)
 {

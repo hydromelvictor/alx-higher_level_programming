@@ -1,15 +1,15 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-let n = Math.floor(Number(argv[1]));
+let n = Math.floor(Number(process.argv[2]));
+let m;
+let f = n;
 if (n)
 {
     while (n > 0)
     {
-        while (n > 0)
-        {
-            console.log('X');
-        }
-        console.log('\n');
+	    m = '';
+	    for (let i = 0; i < f; i++) m += 'X';
+	    console.log(m);
+	n--;        
     }
 }else{
     console.log('Missing size');

@@ -1,6 +1,5 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-let n = Math.floor(Number(argv[1]));
+let n = Math.floor(Number(process.argv[2]));
 if (n)
 {
     while (n < 0)
