@@ -1,7 +1,7 @@
 #!/usr/bin/node
 module.exports = class Rectangle {
   constructor (w, h) {
-    if (typeof(h) === 'number' && typeof(w) === 'number' && h > 0 && w > 0) {
+    if (typeof (h) === 'number' && typeof (w) === 'number' && h > 0 && w > 0) {
       this.width = w;
       this.height = h;
     }
@@ -16,7 +16,7 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    let span = this.height;
+    const span = this.height;
     this.height = this.width;
     this.width = span;
   }
