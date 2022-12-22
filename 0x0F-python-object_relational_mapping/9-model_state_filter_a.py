@@ -6,7 +6,7 @@ the letter a from the database hbtn_0e_6_usa
 
 import sys
 from sqlalchemy import create_engine
-from model_state import State, Base
+from model_state import State
 from sqlalchemy.orm import sessionmaker
 
 
@@ -18,5 +18,5 @@ if __name__ == '__main__':
     session = Session()
     letters = session.query(State).order_by(State.id):
         for letter in letters:
-            if 'a' in letter.name:
+            if "a" in letter.name:
                 print("{}: {}".format(letter.id, letter.name))
