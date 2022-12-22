@@ -13,9 +13,9 @@ if __name__ == '__main__':
     conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
                            db=sys.argv[3])
     cur = conn.cursor()
-    cur.execute("SELECT *\
-                FROM `cities` INNER JOIN `states`\
-                ON `states`.`id`=`cities`.`state_id`\
+    cur.execute("SELECT * FROM `cities`\
+                INNER JOIN `states`\
+                ON `states`.`id` = `cities`.`state_id`\
                 ORDER BY `cities`.`id`")
-    query_rows = cur.fetchall
+    query_rows = cur.fetchall()
     print(", ".join([row[2] for row in query_rows if row[4] == sys.argv[4]]))
