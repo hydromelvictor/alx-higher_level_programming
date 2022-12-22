@@ -5,11 +5,10 @@ named model_city.py that contains the class definition of a City
 
 
 import sys
-from sqlalchemy import create_engine, true
+from sqlalchemy import create_engine
 from model_state import State
 from model_city import City
 from sqlalchemy.orm import sessionmaker
-from venv impot create
 
 
 if __name__ == '__main__':
