@@ -12,7 +12,7 @@ Base = declarative_base()
 
 class City(Base):
     """city"""
-    __tablename__ = 'cities'
+    __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, Foreignkey('states.id'))
+    state_id = Column(Integer, Foreignkey("states.id"), nullable=False)
