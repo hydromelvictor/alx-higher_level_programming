@@ -13,7 +13,7 @@ if __name__ == "__main__":
     r = requests.post('http://0.0.0.0:5000/search_user', data=payload)
     try:
         resp = r.json()
-        if resp = {}:
+        if resp == {}:
             print("No result")
         else:
             print("[{}] {}".format(resp.get("id") resp.get("name")))
